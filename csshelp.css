@@ -18,4 +18,15 @@ td {
 }
 .content2 {
     font-size: 2.5em;
+
+}
+table {
+    background-color: rgb(216, 195, 245);
+    width: 500px;   
+}
+table {border-color: black;
+    border-style: groove;
+    border-width: 3px;
+    border-left-width: 3px;
+ border-right-width: 3px;
 }
