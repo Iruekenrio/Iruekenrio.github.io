@@ -1,0 +1,44 @@
+.content {
+
+display: inline-block
+}
+li {
+    margin: 0em;
+    padding: 0em;
+}
+.sham {
+    background-color: rgb(30, 30, 190);
+}
+.monk {
+    background-color: darkcyan;
+}
+.pal {
+    background-color: rgb(207, 56, 182);
+}
+.war {
+    background-color: rgb(92, 38, 38);
+}
+.mage {
+    background-color: cornflowerblue;
+}
+.hunt {
+    background-color: rgb(7, 116, 7);
+}
+header {
+    background-color: darkgrey;
+}
+.back1 {
+    background-color: darkseagreen;
+}
+.back2 {
+    background-color: rgb(179, 125, 125);
+}
+.back3 {
+    background-color: rgb(148, 143, 188);
+}
+.center {
+    width: 200px; /* Ширина элемента в пикселах */
+    padding: 10px; /* Поля вокруг текста */
+    margin: auto; /* Выравниваем по центру */
+    background: #fc0; /* Цвет фона */
+   }
