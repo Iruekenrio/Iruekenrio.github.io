@@ -1,10 +1,10 @@
 .content {
 
 display: inline-block
-}
+} /* тестирую комментарий*/
 li {
-    margin: 0em;
-    padding: 0em;
+    margin: 1.5em;
+    padding: 1.5em;
 }
 .sham {
     background-color: rgb(30, 30, 190);
@@ -42,3 +42,12 @@ header {
     margin: auto; /* Выравниваем по центру */
     background: #fc0; /* Цвет фона */
    }
+.buttons {
+    text-align: center;
+  }
+article h2 {
+   background-color: deepskyblue;
+}
+article>h2 {
+background-color: darkslategray;
+}
