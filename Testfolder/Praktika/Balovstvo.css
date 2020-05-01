@@ -1,0 +1,15 @@
+.list__item:nth-child(8) {
+    display: none;
+}
+.list__item:nth-child(3) {
+   font-style: italic;
+   font-weight: 700;
+    font-size: 20px ;
+    line-height: 1.2;
+    font-family: Montserrat;
+/* } ИЛИ МОЖЕТ БЫТЬ ИНАЧЕ например font: italic 700 14px "Montserrat" */
+span {
+    margin: 20px 10px;
+    padding: 10px 15px 3px 11px;
+    
+}

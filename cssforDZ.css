@@ -1,0 +1,105 @@
+* {
+    text-align: center;
+    font-family: sans-serif, Monstserrat;
+}
+li {
+    display: inline-block;
+    margin: 10px 10px;
+    padding: 10px 10px;
+    line-height: 4px;
+    background-color: #b2cdd6;
+    border: outset #efefee;
+    color: #d5d1ca;
+    border-radius: 1em;
+    
+    
+}
+li:hover {
+    border:inset
+}
+body header nav ul.list {
+    word-spacing: 55px;
+    margin-top: 0em;
+}
+h2 {
+    font-size: 30px;
+    color: rgb(62, 53, 71);
+}
+article.blog-article {
+    border-radius: 1em;
+    border-style: solid;
+    background-color: rgb(204, 197, 212);
+    font-size: 24px;
+    width: 500px;
+    padding: 5px 5px;
+    margin: 5px 5px;
+    display: inline-block;
+    color: rgb(69, 58, 80);
+}
+a {
+    text-decoration: none;
+}
+
+.list .list-item a {}
+body header nav ul.list .list-item a {}
+a {}
+ul.list .list-item {}
+body .list-item {}
+li.list-item:nth-child(1) {} 
+li.list-item:first-child {}
+li a {}
+.list a {}
+nav a {}
+
+
+
+h2 {}
+body h2 {}
+main h2 {}
+body main h2 {}
+body main section h2 {}
+section h2 {}
+section.blog h2 {}
+main .blog h2 {}
+body .blog h2 {}
+.blog h2 {}
+
+
+
+article.blog-article:nth-child(2) {}
+.blog-article:nth-child(2) {}
+.blog .blog-article:nth-child(2) {}
+section .blog-article:nth-child(2) {}
+section.blog .blog-article:nth-child(2) {}
+main .blog article.blog-article:nth-child(2) {}
+body .blog-article:nth-child(2) {}
+main .blog .blog-article:nth-child(2) {}
+body main .blog .blog-article:nth-child(2) {}
+body .blog .blog-article:nth-child(2) {}
+
+
+
+input {}
+input.ontacts-form-input {}
+form .ontacts-form-input {}
+form#contacts-form input.ontacts-form-input {}
+form#contacts-form .ontacts-form-input {}
+#contacts-form input {}
+#contacts-form input.ontacts-form-input {}
+body .ontacts-form-input {}
+.contacts #contacts-form .ontacts-form-input {}
+.contacts .ontacts-form-input {}
+
+
+
+
+button {}
+button.contacts-form-submit {}
+form button.contacts-form-submit {}
+section button.contacts-form-submit {}
+section.contacts button.contacts-form-submit {}
+body button.contacts-form-submit {}
+main button.contacts-form-submit {}
+body main button.contacts-form-submit {}
+body main .contacts button.contacts-form-submit {}
+.contacts-form-submit {}
