@@ -5,57 +5,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="cssforDZ.css">
-    <style>
-        body {
-            background: linear-gradient(to left, #005b7c 5%,
-             #008eab 30%, #01bcc6 70%, #d5d1ca 100%);
-             
-        }
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="cssforDZ.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul class='list'>
-                <li class='list-item'> <a href="">Home</a></li>
-                <li class='list-item'> <a href="">About</a></li>
-                <li class='list-item'> <a href="">Portfolio</a></li>
-                <li class='list-item'> <a href="">Blog</a></li>
-                <li class='list-item'> <a href="">Contacts</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="logo header__logo">
+            <img class="logo__img" src="kot.jpg" alt="kot">
+        </div>
+        <form class="mail header__mail" action="">
+            <input class="mail__input" type="text">
+            <input class="mail__input" type="text">
+            <button class="mail__button">Submit</button>
+        </form>
     </header>
-    <main>
-        <section class='blog'>
-            <h2>Blog</h2>
-            <article class="blog-article">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                officia deserunt mollit anim id est laborum.</article>
-            <article class="blog-article">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                officia deserunt mollit anim id est laborum.</article>
+    <main class="main">
+        <section class="description main__description">
+            <article class="description__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae beatae nemo totam libero
+                itaque suscipit debitis, est quis culpa deleniti nostrum ex optio iusto ipsum laborum corrupti, non
+                perspiciatis animi!</article>
+            <article class="description__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem est totam doloribus iusto
+                alias inventore, minus beatae impedit illo animi nesciunt adipisci porro, veritatis quidem rerum aperiam
+                fuga sed laboriosam!</article>
+            <article class="description__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quod totam doloremque aut ipsam
+                molestiae dolore, nisi perspiciatis aliquam provident at quam odit fuga expedita, odio cumque incidunt!
+                Obcaecati, quidem!</article>
         </section>
-        <section class='contacts'>
-            <h2>Contacts</h2>
-            <form action="" id="contacts-form">
-                <input type="text" class="ontacts-form-input">
-                <button type="submit" id="contacts-form-submit">Submit</button>
-            </form>
+        <section class="menu main__menu">
+            <ul class="list menu__list">
+                <li class="list__item"><a href="">Home</a></li>
+                <li class="list__item"><a href="">Blog</a></li>
+                <li class="list__item"><a href="">About</a></li>
+                <li class="list__item"><a href="">FAQ</a></li>
+                <li class="list__item"><a href="">Contacts</a></li>
+            </ul>
         </section>
-    </main>
-    <footer>
-        <span style="font-weight: 100; font-style: italic;">Copyright</span>
-    </footer>
+        <section class="contacts main__contacts">
+            <h2 class="contacts__head">Contacts</h2>
+            <p class="contacts__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores autem minima optio odit nostrum harum
+                maxime numquam libero dolore rerum, quam culpa neque cum eum eos repellendus repudiandae explicabo sed.
+            </p>
 
+            <form class="mail2 contacts__mail2" action="">
+                <input class="mail2__text" type="text">
+                <input class="mail2__text" type="text">
+                <textarea class="mail2__textarea" name="" id="" cols="30" rows="10"></textarea>
+                <button>Submit</button>
+            </form>
+            <div class="subhead contacts__subhead">
+                <div class="subhead__box">
+                    <h3 class="subhead__head">subheader1</h3>
+                    <span class="subhead__body">Text1</span>
+                </div>
+                <div class="subhead__box">
+                    <h3 class="subhead__head">subheader2</h3>
+                    <span class="subhead__body">Text1</span>
+                </div>
+                <div class="subhead__box">
+                    <h3 class="subhead__head">subheader3</h3>
+                    <span class="subhead__body">Text1</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <form class="mail3 mail3__footer" action="">
+            <input class="mail3__text" type="text">
+            <input class="mail3__text" type="text">
+            <button class="mail3__button">Submit</button>
+        </form>
+        <p class="mail3__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem vel fuga nihil, totam in iusto ut
+            aut quibusdam est delectus praesentium ullam voluptatibus dolores, nostrum, ab cum perspiciatis expedita
+            repellendus.</p>
+    </footer>
 </body>
 
 </html>
-

@@ -1,105 +1,123 @@
+@font-face{
+    font-family: 'Ralewayy';
+    src: url('../fonts/WebFont.eot');
+    src: url('../fonts/WebFont.eot?#iefix') format('eot'),
+    url('D:/Pashkan/fonts/ralewayregular.woff') format('woff'),
+    url('D:/Pashkan/fonts/ralewayregular.ttf') format('truetype'),
+    url('../fonts/WebFont.svg#webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 * {
+    font-family: Raleway, sans-serif;
+    
+}
+body {
+    background: linear-gradient(to top, #5d6e58 30%, #848555 70%, #ce8e8e 100%);
+
+}
+.header {
+    display: block;
+
+}
+.header__logo {
+    display: inline;
+}
+.logo__img {
+    width: 100px;
+    height: 100px;
+    
+}
+.header__mail {
+    display: inline;
+}
+.description__text {
+border-radius: 1em;
+border-color: lightslategray;
+border-style: solid;
+margin: 3px;
+padding: 3px;
+min-width: 250px;
+min-height: 135px;
+width: 27vw;
+height: 15vh;
+display: inline-block;
+}
+.description__text:nth-child(1) {
+color: rgb(46, 110, 84);
+background-color: thistle;
+}
+.description__text:nth-child(2) {
+color: rgb(141, 49, 37);
+background-color: thistle;
+}
+.description__text:nth-child(3) {
+color: rgb(67, 59, 124);
+background-color: thistle;
+}
+.menu__list {
     text-align: center;
-    font-family: sans-serif, Monstserrat;
+    border-radius: 1em;
+    border-color: white;
+    border-style: dashed;
+    background: rgb(189, 130, 58);
+    margin-left: 30em;
 }
-li {
+.list__item {
     display: inline-block;
+    border: black;
+    border-style: dotted;
+    text-decoration: dotted;
+    font-size: large;
     margin: 10px 10px;
-    padding: 10px 10px;
-    line-height: 4px;
-    background-color: #b2cdd6;
-    border: outset #efefee;
-    color: #d5d1ca;
-    border-radius: 1em;
-    
-    
+    padding: 10px 15px;
 }
-li:hover {
-    border:inset
+section.contacts {
+   background-color: bisque;
+   border: 1em;
+   border-style: solid;
+   border-color: rgb(233, 204, 161);
+   box-shadow: 0px 0px 15px 4px rgb(247, 177, 111) ;
+   margin: 15px;
 }
-body header nav ul.list {
-    word-spacing: 55px;
-    margin-top: 0em;
+.contacts__head {
+    font-size: larger;
+    color: rgb(66, 63, 63);
 }
-h2 {
-    font-size: 30px;
-    color: rgb(62, 53, 71);
-}
-article.blog-article {
-    border-radius: 1em;
-    border-style: solid;
-    background-color: rgb(204, 197, 212);
-    font-size: 24px;
-    width: 500px;
-    padding: 5px 5px;
-    margin: 5px 5px;
+.subhead .subhead__box:nth-child(2) {
     display: inline-block;
-    color: rgb(69, 58, 80);
+    color: rgb(255, 248, 255);
 }
-a {
-    text-decoration: none;
+.subhead .subhead__box:nth-child(1) {
+    display: inline-block;
+    color: rgb(143, 246, 250);
 }
 
-.list .list-item a {}
-body header nav ul.list .list-item a {}
-a {}
-ul.list .list-item {}
-body .list-item {}
-li.list-item:nth-child(1) {} 
-li.list-item:first-child {}
-li a {}
-.list a {}
-nav a {}
+.subhead__box {
+    border-radius: 1em;
+    border-style: double;
+    border-color: gray;
+    margin: 7px;
+    padding: 10px;
+
+}
+.mail2__textarea {
+    background-color: black;
+    resize: none;
+    color: crimson;
+}
+footer {
+    background: rgb(13, 110, 0);
+    box-shadow: 0px 0px 10px 3px rgb(68, 85, 74) inset;
+    padding: 10px;
+}
 
 
+.mail3__text:nth-child(1) {
+    background-color: rgb(44, 26, 26);
+}
+.mail3__text:nth-child(2) {
+    box-shadow: 0px 0px 6px 3px rgba(252, 26, 26, 0.7) inset;
+    background-color: seagreen;
+}
 
-h2 {}
-body h2 {}
-main h2 {}
-body main h2 {}
-body main section h2 {}
-section h2 {}
-section.blog h2 {}
-main .blog h2 {}
-body .blog h2 {}
-.blog h2 {}
-
-
-
-article.blog-article:nth-child(2) {}
-.blog-article:nth-child(2) {}
-.blog .blog-article:nth-child(2) {}
-section .blog-article:nth-child(2) {}
-section.blog .blog-article:nth-child(2) {}
-main .blog article.blog-article:nth-child(2) {}
-body .blog-article:nth-child(2) {}
-main .blog .blog-article:nth-child(2) {}
-body main .blog .blog-article:nth-child(2) {}
-body .blog .blog-article:nth-child(2) {}
-
-
-
-input {}
-input.ontacts-form-input {}
-form .ontacts-form-input {}
-form#contacts-form input.ontacts-form-input {}
-form#contacts-form .ontacts-form-input {}
-#contacts-form input {}
-#contacts-form input.ontacts-form-input {}
-body .ontacts-form-input {}
-.contacts #contacts-form .ontacts-form-input {}
-.contacts .ontacts-form-input {}
-
-
-
-
-button {}
-button.contacts-form-submit {}
-form button.contacts-form-submit {}
-section button.contacts-form-submit {}
-section.contacts button.contacts-form-submit {}
-body button.contacts-form-submit {}
-main button.contacts-form-submit {}
-body main button.contacts-form-submit {}
-body main .contacts button.contacts-form-submit {}
-.contacts-form-submit {}
