@@ -1,123 +1,355 @@
-@font-face{
-    font-family: 'Ralewayy';
-    src: url('../fonts/WebFont.eot');
-    src: url('../fonts/WebFont.eot?#iefix') format('eot'),
-    url('Pashkan/fonts/ralewayregular.woff') format('woff'),
-    url('Pashkan/fonts/ralewayregular.ttf') format('truetype'),
-    url('../fonts/WebFont.svg#webfont') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+
 * {
-    font-family: Raleway, sans-serif;
-    
+    margin: 0;
+    padding: 0;
+    font-family: Kalam, sans-serif;
+}
+@keyframes anim {
+
+    1% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+
+    }
+    100% {
+        opacity: 0.1;
+
+    }
 }
 body {
-    background: linear-gradient(to top, #5d6e58 30%, #848555 70%, #ce8e8e 100%);
+    min-height: 1700px;
+    background: rgb(49, 49, 42);
+}
+header {
+    background: rgb(29, 143, 143);
+    background-image: url(dom.jpg);
+    background-size: cover;
+    position: absolute;
+    top: -1px;
+    width: 100vw;
+    height: 100vh;
+   
+    
+    
+    }
+.name {
+   min-width: 100px;
+   min-height: 100px;
+   width: 50vw;
+   height: 40vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40vh;
+    box-sizing: border-box;
+    border: 0px; 
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    
 
 }
-.header {
-    display: block;
 
-}
-.header__logo {
-    display: inline;
-}
-.logo__img {
-    width: 100px;
-    height: 100px;
+.name__text {
+    width: 40vw;
+    height: 40vh;
+    font-size: 80px;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+   margin-left: auto;
+   margin-right: auto;
+    text-align: center;
     
 }
-.header__mail {
-    display: inline;
+
+.logo {
+    position: absolute;
+    top: 3%;
+    left: 6%;
+    font-size: 45px;
+    width: 35vw;
+    height: 35vh;
+    color: #fff;
+    text-shadow: rgb(68, 64, 64);
+    
 }
-.description__text {
-border-radius: 1em;
-border-color: lightslategray;
-border-style: solid;
-margin: 3px;
-padding: 3px;
-min-width: 250px;
-min-height: 135px;
-width: 27vw;
-height: 15vh;
-display: inline-block;
+.fas {
+    display: inline-block;
+    font-size: 2.3em;
+    text-shadow: rgb(68, 64, 64);
+    
+    
+    
+
+    
 }
-.description__text:nth-child(1) {
-color: rgb(46, 110, 84);
-background-color: thistle;
+.logo__name {
+    list-style-type: none;
+    display: inline-block;
 }
-.description__text:nth-child(2) {
-color: rgb(141, 49, 37);
-background-color: thistle;
+
+.contacts {
+    position: absolute;
+    top: 3%;
+    right: 4%;
+    font-size: 45px;
+    width: 35vw;
+    height: 35vh;
+    color: #fff;
+    text-shadow: rgb(68, 64, 64); 
+
 }
-.description__text:nth-child(3) {
-color: rgb(67, 59, 124);
-background-color: thistle;
+main {
+    position: absolute;
+    background: rgb(122, 122, 122);
+    top: 100vh;
+    width: 100vw;
+    height: 70vh;
 }
-.menu__list {
+.menu {
+    position: relative;
+    width: 28vw;
+    height: 29vh;
     text-align: center;
-    border-radius: 1em;
-    border-color: white;
-    border-style: dashed;
-    background: rgb(189, 130, 58);
-    margin-left: 30em;
-}
-.list__item {
     display: inline-block;
-    border: black;
-    border-style: dotted;
-    text-decoration: dotted;
-    font-size: large;
-    margin: 10px 10px;
-    padding: 10px 15px;
-}
-section.contacts {
-   background-color: bisque;
-   border: 1em;
-   border-style: solid;
-   border-color: rgb(233, 204, 161);
-   box-shadow: 0px 0px 15px 4px rgb(247, 177, 111) ;
-   margin: 15px;
-}
-.contacts__head {
-    font-size: larger;
-    color: rgb(66, 63, 63);
-}
-.subhead .subhead__box:nth-child(2) {
-    display: inline-block;
-    color: rgb(255, 248, 255);
-}
-.subhead .subhead__box:nth-child(1) {
-    display: inline-block;
-    color: rgb(143, 246, 250);
+    border-style: solid;
+    border-radius: 3px;
+    border-color: black;
+    margin: 2%;
+    margin-top: 20vh;
+    box-sizing: border-box;
+    padding: 5px;
+    vertical-align:top;
+    background: rgba(51, 51, 51, 0.8) ;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.subhead__box {
-    border-radius: 1em;
-    border-style: double;
-    border-color: gray;
-    margin: 7px;
-    padding: 10px;
+.menu:nth-child(1) .far {
+    font-size: 2em;
+    color: rgb(102, 9, 9);
+    text-shadow: 0 0 6px rgb(105, 45, 45);
+}
+.menu:nth-child(2) .far {
+    font-size: 2em;
+    color: rgb(108, 114, 21);
+    text-shadow: 0 0 6px rgb(95, 97, 69);
+}
+.menu:nth-child(3) .far {
+    font-size: 2em;
+    color: rgb(32, 90, 20);
+    text-shadow: 0 0 3px rgb(66, 119, 64);
+}
+.menu:before {
+    font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f017";
+    display: none;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-size: 2.5em;
+    color: rgb(153, 0, 0);
+    background: rgb(255, 252, 252);
+    opacity: 0.8;
+    padding-top: calc(50% - 3.5em) ;
+    
 
 }
-.mail2__textarea {
-    background-color: black;
-    resize: none;
-    color: crimson;
+
+.menu:nth-child(1):hover:before {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+       
 }
+.menu:nth-child(1):hover {
+    display: inline-block;
+    top: 0;
+    left: 0;
+    transform: scale(0.9) ;
+       
+}
+.menu:nth-child(2):hover {
+    background-color: rgb(102, 9, 9);
+    border-radius: 20px;
+    transform: translate(-35px, -25px);
+}
+.menu:nth-child(2) {
+    background-color: rgba(51, 51, 51, 0.8);
+    border-radius: 0;
+    transition: background-color 4s ease, transform 2s, border-radius 2s;
+}
+
+
+.menu:nth-child(3) {
+    background-color: rgba(51, 51, 51, 0.8);
+    border-radius: 0;
+    animation: anim 1.5s linear 0s infinite alternate;
+}
+h2 {
+    margin-bottom: 5px;
+    color: rgb(121, 184, 184);
+}
+
 footer {
-    background: rgb(13, 110, 0);
-    box-shadow: 0px 0px 10px 3px rgb(68, 85, 74) inset;
-    padding: 10px;
+    position: absolute;
+    top: 180vh;
 }
 
-
-.mail3__text:nth-child(1) {
-    background-color: rgb(44, 26, 26);
+.clock {
+    height: 200px;
+    width: 200px;
+    border-radius: 50% 2px;
+    border-style: solid;
+    border-color: cadetblue;
+    margin-left: 100px;
+    background-color: rgb(224, 233, 183);
+    position: relative;
+    box-sizing: border-box;
+    font-size: 20px;
+        
 }
-.mail3__text:nth-child(2) {
-    box-shadow: 0px 0px 6px 3px rgba(252, 26, 26, 0.7) inset;
-    background-color: seagreen;
+.visualfix {
+    height: 25px;
+    width: 25px;
+    background-color: rgb(44, 85, 87);
+    position: absolute;
+    top: 85px;
+    left: 85px;
+    z-index: 2;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 2px cadetblue;
+
+}
+.hour {
+    position: absolute;
+    height: 60px;
+    width: 8px;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    /* transform: rotate(90deg) translate(-35px) translateY(35px); */
+    animation: hour 3600s steps(3600) 0s infinite;
+    transform-origin: 0px 0px;
+    border-radius: 6px;
+    
+
 }
 
+@keyframes hour {
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+/* ПРОБНИК
+@keyframes clock {
+    from {
+        transform: rotate(90deg) translate(-35px) translateY(35px);
+    }
+    25% {
+        transform: rotate(180deg) translateX(0px) translateY(70px);
+
+    }
+    50% {
+        transform: rotate(90deg) translateX(-35px) translateY(-35px);
+        
+    }
+    75% { 
+        
+        transform: rotate(180deg) translateX(0px) translateY(0px);
+    }
+    to {
+        transform: rotate(90deg) translate(-35px) translateY(35px);
+
+    } */
+
+
+.second {
+    position: absolute;
+    height: 85px;
+    width: 3px;
+    top: 50%;
+    left: 50%;
+    animation: second 60s infinite steps(60) ;
+    transform-origin: 0px 0px;
+    background-color: cadetblue;
+    border-radius: 6px;
+}
+@keyframes second {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.minute {
+    position: absolute;
+    height: 75px;
+    width: 5px;
+    top: 50%;
+    left: 50%;
+    animation: minute 1000s infinite steps(1000);
+    transform-origin: 0px 0px;
+    background-color: chocolate;
+    border-radius: 6px;
+    
+
+}
+
+@keyframes minute {
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+.twelve {
+    position: absolute;
+    top: 0;
+    left: 48%;
+    margin-top: 5px;
+    
+}
+.three {
+    position: absolute;
+    top: 45%;
+    right: 6px;
+    
+}
+.six {
+    position: absolute;
+    bottom: 4px;
+    left: 48%;
+
+}
+.nine {
+    position: absolute;
+    left: 6px;
+    top: 45%;
+}
+.numbers {
+    text-shadow: 0 0 1.5px black;
+}
+.tick {
+    font-size: 15px;
+    position: absolute;
+    opacity: 0.7;
+    top: 50px;
+    left: 55px;
+
+
+}
+.circle {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    border-style: dotted;
+    background-color: darkgoldenrod;
+    opacity: 0.2;
+    position: absolute;
+    top: 28px;
+    left: 28px;
+
+}
