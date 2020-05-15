@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+
+}
+main{
+    flex: 1;
+}
+.wrapper{
+    width: 72.22%;
+    margin: 0 auto;
+}
+.blog{
+    background-color: thistle;
+    padding: 50px 0;
+}
+
+
+.blog .wrapper{
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+
+}
+.blog__item{
+    /* width: 300px; */
+    width: 30%;
+    /* height: 250px; */
+    /* изначальный размер */
+    /* flex-basis: 250px; */
+    
+    
+    /* 1/3  свойство отвечающее за увеличение блоков*/
+    /* flex-grow: 1; */
+    /* свойство отвечающее за уменьшение блоков */
+    /* flex-shrink: 1; */
+    padding: 10px;
+    border: 1px solid white;
+    background-color: violet;
+    text-align: center;
+    /* display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center; */
+
+/* 
+   1grow 2shrink 3basis */
+    /* flex: 0 1 50% */
+}
+.blog__item:nth-child(2){
+   /* flex: 2 1 300px */
+}
+.blog__item:nth-child(3){
+   /* flex: 1 2 300px; */
+}
+
+.blog__item__header{
+    margin-bottom: 10px;
+    min-height: 56px;
+}
+.wrap-text{
+    /* В CALC НУЖНО СТАВИТЬ ПРОБЕЛЫ!!!11!! иначе ниче не будет работать */
+    height: calc(100% - 66px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 320px 480px 576px 768px 992px 1024px 1200px 1440px 1630px */
+
+@media (max-width: 992px){
+    .blog .wrapper{
+        justify-content: space-around;
+    }
+    .blog__item{
+        width: 48%;
+        margin-bottom: 15px;
+    }
+    
+
+}
+@media (max-width: 576px){
+    .wrapper{
+        width: 90%;
+    }
+}
+@media (max-width:480px){
+    .blog__item{
+        width: 100%;
+    }
+}
+
+/* bootstrap */
+
+.block{
+    background-color: teal;
+    border: 1px solid black;
+    border-radius: 4px;
+    
+}
+.alert-block {
+    color: red;
+}
