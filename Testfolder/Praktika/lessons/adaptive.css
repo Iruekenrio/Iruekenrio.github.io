@@ -120,19 +120,19 @@
     /* width: 20% * 3 = 60%; */
     flex-grow: 3;
 }
-.child:nth-child(3) {
-    /* order: 6; */
+/* .child:nth-child(3) {
+    order: 6;
 }
 .child:nth-child(4) {
-    /* order: 1; */
-}
+    order: 1;
+} */
 .child:nth-child(5) {
     /* order: 3; */
     align-self: flex-end;
 }
-.child:nth-child(6) {
-    /* order: 2; */
-}
+/* .child:nth-child(6) {
+    order: 2;
+} */
 
 /* flex + adaptive */
 
