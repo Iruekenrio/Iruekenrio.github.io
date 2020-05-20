@@ -1,0 +1,9 @@
+body{
+    min-height: 100vh;
+}
+.carousel-item{
+    max-height: 380px;
+}
+main{
+    padding-top: 90px;
+}

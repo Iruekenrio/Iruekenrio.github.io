@@ -7,12 +7,14 @@ body{
     display: flex;
     flex-direction: column;
     height: 3709px;
+    background-image: url(layear-small.jpg);
+    
    
 }
 header{
     width: 100%;
     height: 135px;
-    
+     
 
 }
 .logo{
@@ -24,7 +26,7 @@ header{
       
 }
 .logo__letter{
-    margin-left: 300px;
+    margin-left: 17.6%;
     width: 80px;
     height: 66px;
     background-color: #f26c4f;
@@ -43,7 +45,7 @@ header{
 .logo__triangle{
 
     margin-top: 23px;
-    margin-left: 0px;
+    margin-left: -1px;
         width: 0;
         height: 0;
         border-top: 10px solid transparent;
@@ -66,15 +68,17 @@ nav{
 }
 .menu{
     width: 400px;
-    margin-left: 325px;
+    margin-left: 19%;
     display: flex;
     justify-content: space-between;
+    
     height: 14px;
     
 }
 .menu__item{
     width: 60px;
     margin-right: 0px;
+    
     color: white;
     font-family: Roboto, Helvetica, sans-serif;
     font-size: 12px;
@@ -107,4 +111,137 @@ nav{
 .menu__box:hover .hover__menu-items{
     background-color: #f26c4f;
     
+}
+main{
+    margin-left: 17.6%;
+    margin-right: 17.6%;
+    display: flex;
+    flex-direction: column;
+    
+    width: 64.8%;
+    height: 3709px;
+}
+.search{
+    width: 300px;
+    height: 46px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 1px 0px rgb(0, 0, 0);
+   
+    
+}
+input{
+    margin-left: 10%;
+    margin-right: 5%;
+    height: 17px;
+    width: 150px;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #959595;
+}
+.fa-clock {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 23px;
+    color: #f26c4f;
+}
+.social{
+    width: 300px;
+    height: 46px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;    
+    font-family: Arial, Helvetica, sans-serif;
+    color: #959595;
+    margin-left: 15px;
+    margin-top: 16px;
+}
+.subhead {
+    display: flex;
+    justify-content: space-between;
+    
+    width: 100%;
+    margin-top: 15px;
+}
+.first-content{
+    height: 390px;
+    width: 100%;
+    background-color: brown;
+    display: flex;
+    
+
+}
+.first-content__big{
+    background-image: url(Bridge2x.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.first-content__line{
+    width: 1%;
+    height: 100%;
+    background-color: #f26c4f;
+}
+.first-content__small{
+    width: 34%;
+    height: 100%;
+    background-color: #373737;
+}
+.first-content__small-triangle{
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 6px;
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-left: 12px solid #f26c4f;
+        border-bottom: 10px solid transparent;
+       
+}
+.first-content__small-text{
+    width: 72%;
+    margin: 29px auto;
+    
+    
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    
+}
+.first-content__small-text h2{
+    font-size: 19px;
+    margin-bottom: 14px;
+    letter-spacing: -0.19px;
+    color: white;
+}
+.first-content__small-text p{
+    line-height: 1.92;
+    color: #a7a7a7;
+}
+.first-content__small-text .fa-clock{
+    color: #a7a7a7;
+}
+.first-content__small-text p:nth-child(3){
+    margin-top: 15px;
+    text-align: right;
+}
+.first-content__big-text{
+width: 370px;
+height: 62px;
+background-color: rgba(000, 000, 000, 0.5);
+}
+.first-content__big-text p{
+    margin-top: 22px;
+    text-align: center;
+    color: white;
+    font-family: Arial;
+    font-size: 16px;
 }

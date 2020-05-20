@@ -1,0 +1,91 @@
+/* .triangle{
+    width: 100px;
+    height: 50px;
+    position: relative;
+    background: green;
+}
+.triangle::after{
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: -30px;
+    border: 10px solid transparent;
+    border-left: 20px solid red;
+
+}
+.clip{
+    width: 100px;
+    height: 100px;
+    background: indigo;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+} */
+/* крайний левый крайний правый */
+/* .way{
+    position: absolute;
+   bottom: 0;
+   left: 0;
+    width: 100px;
+    height: 100px;
+    background: indigo;
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+}
+.way2{
+    position: absolute;
+   bottom: 0;
+   right: 0;
+   
+    width: 100px;
+    height: 100px;
+    background: indigo;
+    clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+} */
+
+body{
+    display: grid;
+    grid-template-rows: 60px 1fr 60px;
+    grid-template-columns: 20% 1fr 15%;
+    margin: 0;
+    height: 100vh;
+    grid-template-areas: 
+    "header header header"
+    "nav article ads"
+    "footer footer footer";
+    grid-gap: 10px;
+}
+header, footer, article, nav, div{
+    background: gold;
+    padding: 20px;
+}
+#pageHeader{
+    grid-area: header;
+}
+#mainArticle{
+    grid-area: article;
+}
+#mainNav{
+    grid-area: nav;
+}
+#siteAds{
+    grid-area: ads;
+}
+#pageFooter{
+    grid-area: footer;
+}
+/* 768 column 1fr  row repeat 5 1fr   возможное решение дз*/
+
+@media (max-width: 768px){
+    body{
+        display: grid;
+        grid-template-rows: 80px 1fr 1fr 1fr 80px;
+        grid-template-columns: 20% 1fr 15%;
+        margin: 0;
+        height: 100vh;
+        grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "article article article"
+        "ads ads ads"
+        "footer footer footer";
+        grid-gap: 10px;
+    }
+}
