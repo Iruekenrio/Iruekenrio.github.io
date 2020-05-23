@@ -1,0 +1,33 @@
+body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: lavender;
+  color: green;
+  font-weight: 700;
+}
+
+body {
+  background: yellow;
+}
+body .blog__chat {
+  padding: 10px;
+}
+body .blog__chat__item {
+  background: green;
+  display: flex;
+  align-items: center;
+}
+body .blog__chat__item:after {
+  content: "";
+  display: block;
+  widows: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: yellow;
+  margin-left: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

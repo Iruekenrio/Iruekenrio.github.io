@@ -1,0 +1,30 @@
+@import "reset";
+
+@import "header";
+@import "variables";
+
+body{
+    background: $primary-color;
+   
+    
+    .blog__chat{
+        padding: 10px;
+        &__item{           
+                background: $secondary-color;
+                display: flex;
+                align-items: center;        
+                &:after{
+                    content: "";
+                    display: block;
+                    widows: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: $primary-color;
+                    margin-left: 10px;
+                }
+                
+        }
+    }
+    
+    
+}
