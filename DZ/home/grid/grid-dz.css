@@ -1,0 +1,93 @@
+.box {
+  width: 320px;
+  height: 320px;
+  background-color: darkslategrey;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  border: 2px solid;
+}
+.box .box__item {
+  width: 98%;
+  height: 98%;
+  background-color: darkturquoise;
+  border: 1px solid;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 10px;
+}
+
+.box-two {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.box-three {
+  grid-column: 3/4;
+}
+
+.box-four {
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+
+.box div.box-five {
+  grid-row: 3/4;
+  background-color: khaki;
+}
+
+.box-six:nth-child(2) {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.box-six:nth-child(3) {
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+
+.box:nth-child(7) {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.box div.box-seven {
+  height: 33%;
+}
+
+.box div.box-seven:nth-child(2) {
+  align-self: stretch;
+  height: auto;
+}
+
+.box div.box-seven:nth-child(1) {
+  align-self: flex-end;
+}
+
+.box:nth-child(8) {
+  grid-template-rows: repeat(15, 1fr);
+  grid-template-columns: repeat(15, 1fr);
+}
+
+.box-eight:nth-child(1) {
+  background-color: gold;
+  grid-column: 2/15;
+  grid-row: 2/15;
+}
+
+.box-eight:nth-child(2) {
+  background-color: gray;
+  grid-column: 4/13;
+  grid-row: 4/13;
+}
+
+.box-eight:nth-child(3) {
+  background-color: khaki;
+  grid-column: 6/11;
+  grid-row: 6/11;
+}
+
+/*# sourceMappingURL=grid-dz.css.map */
