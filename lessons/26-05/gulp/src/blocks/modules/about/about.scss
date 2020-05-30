@@ -1,0 +1,24 @@
+.about{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__item{
+        width: 30%;
+        min-height: 300px;
+        background-color: green;
+        margin-top: 30px;
+        @media screen and (max-width: $tableWidth) {
+            width: 48%;
+        }
+        @media screen and (max-width: $phoneWidth) {
+            width: 100%;
+        }
+        
+    }
+    .empty{
+        min-height: 0;
+        background: none;
+        margin-top: 0;
+    }
+    
+}

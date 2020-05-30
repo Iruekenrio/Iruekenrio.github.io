@@ -1,3 +1,10 @@
 @import "modules/header/header";
 @import "modules/footer/footer";
-@import "modules/main/added-file.scss"
+@import "modules/main/added-file.scss";
+@import "modules/about/about.scss";
+
+
+body{
+    width: 90%;
+    margin: 0 auto;
+}
