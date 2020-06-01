@@ -1,5 +1,6 @@
 html{
     overflow-x: hidden;
+    overflow-y: auto;
 }
 *{
     box-sizing: border-box;
@@ -605,7 +606,7 @@ footer{
     align-content: center;
     padding-bottom: 15px;
     margin-top: 30px;
-    margin-bottom: -1px;
+    
 }
 .footer-menu li{
     display: inline-block;
