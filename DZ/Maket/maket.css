@@ -814,11 +814,11 @@ footer{
     .first-content{
         height: 430px;
     }
-    .second-content__item-text, .third-content__item-text h2{
-        font-size: 11.5px;
+    .second-content__item-text h2, .third-content__item-text h2{
+        font-size: 14px;
     }
     .second-content__item-text p, .third-content__item-text p{
-        font-size: 9px;
+        font-size: 10px;
     }
     .first-content__small-text h2, .third-content__small-item2 h2{
         font-size: 15px;
@@ -834,6 +834,18 @@ footer{
     }
     .third-content__larg__text-boxage p, .third-content__larg__block-text p, .third-content__larg__text-box p{
         font-size: 11px;
+    }
+    .third-content__small-item1{
+        display: block;
+        height: 330px;
+    }
+    .third-content__small-item1 .third-content__item-img{
+        width: 100%;
+        height: 50%;
+    }
+    .third-content__small-item1 .third-content__item-text{
+        width: 100%;
+        height: 50%;
     }
     
 }
