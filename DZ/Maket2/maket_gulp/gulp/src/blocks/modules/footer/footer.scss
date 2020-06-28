@@ -1,0 +1,82 @@
+.ground {
+    background-color: #e5e5e5;
+}
+.postmain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: 0 10%;
+    font-family: Roboto;
+    font-size: 14px;
+    color: #cacaca;
+    padding-top: 40px;
+    padding-bottom: 25px;
+    line-height: 1.71;
+    border-bottom: 2px rgba(255, 255, 255, 0.2) solid;
+    .postmain__item {
+        width: 23%;
+        min-width: 185px;
+        margin: 10px 5px;
+    }
+    .postmain__item:nth-child(1) li:nth-child(1) {
+        width: 200px;
+        list-style-image: url(../../../img/svg/address.png);
+    }
+    .postmain__item:nth-child(1) li:nth-child(2) {
+        list-style-image: url(../../../img/svg/phone.png);
+    }
+    .postmain__item:nth-child(1) li:nth-child(3) {
+        list-style-image: url(../../../img/svg/mail.png);
+    }
+    .postmain__item:nth-child(2) {
+        list-style-image: url(../../../img/svg/twitter.png);
+        li {
+            margin-bottom: 20px;
+        }
+    }
+    .postmain__item:nth-child(3) {
+        p {
+            margin-bottom: 0;
+        }
+    }
+    h2 {
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: bold;
+        color: #6c6c6c;
+    }
+    ul {
+        margin-top: 13px;
+    }
+    li {
+        margin-left: 15px;
+    }
+}
+.rights {
+    height: 85px;
+    margin: 0 10%;
+    padding-top: 60px;
+    .rights__text {
+        font-family: Roboto;
+        font-size: 14px;
+        color: #cacaca;
+        line-height: 1.57;
+    }
+}
+
+@media (max-width: 992px) {
+    .postmain .postmain__item {
+        width: 300px;
+        margin: 20px 10px;
+    }
+    .postmain {
+        width: 90%;
+        margin: 0 5%;
+    }
+}
+@media (max-width: 768px) {
+    .postmain .postmain__item {
+        width: 350px;
+    }
+}
