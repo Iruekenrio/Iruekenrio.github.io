@@ -39,7 +39,7 @@ input.addEventListener('keypress', function (e){
         li.append(mark)
         mark.addEventListener('click', function(){
             console.log(this)
-            this.classList.add('done')
+            li.classList.add('done')
         })
 
         list.append(li)
@@ -85,12 +85,23 @@ let box = document.querySelectorAll('box')
 function randomBackground () {
     let arr = Array.from(document.querySelectorAll('td'))
     let redBack = []
-    console.log(redBack)
+    let letter = 'qwertyyuuiookgsakdakdsajcmzkd'
     for(let i = 0; i < arr.length; i++){
-        if(Math.random() >= 0.5){
+        if(Math.round(Math.random()) == 0){
             document.querySelectorAll('td')[i].classList.add('red')
             redBack.push(i)
-        }
+        }else 
+            // td.innerHTML = letter.substr(Math.round(Math.random()), i)
+            for(let j = 0; j < 5; j++){
+                document.querySelectorAll('td')[i].innerHTML += `${letter[Math.round(Math.random() * (letter.length - 1))]}`;
+                // console.log(j)
+                // console.log(letter[Math.round(Math.random() * letter.length)])
+                // console.log(Math.round(Math.random() * letter.length))
+                console.log(letter[0])
+            }
+            
+           
+        
     }
     let summ = document.createElement('div');
     document.body.append(summ)
