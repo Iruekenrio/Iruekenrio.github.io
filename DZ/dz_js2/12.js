@@ -22,7 +22,7 @@ function formatDate(date) {
 }
 
 let sum = 0;
-// let sum2 = 0;
+let sum2 = 0;
 
 function test (){
     let ul = document.createElement('ul');
@@ -63,40 +63,28 @@ function test (){
 function nextButton(){
     document.querySelector('.next').addEventListener('click', function(){
     let arr = Array.from(document.querySelectorAll('li'))
-   
     if(document.querySelectorAll('li') && arr.length > 0){
       for(let i = 0; i < arr.length;i++){
         arr[i].classList.remove('border')
-      }
-      // if(sum > arr.length){
-      //   sum = 0
-      //   console.log('AAAAAA')
-      // }
-      // console.log(sum)
-      if(sum == arr.length){
-        sum = 0
-        console.log('sdfasfasdfdsa')
       }
       arr[sum].classList.toggle('border')
       sum++
+      if(sum == arr.length){
+        sum = 0
+      }
     }
-    
   })
-  
   document.querySelector('.prev').addEventListener('click', function(){
     let arr = Array.from(document.querySelectorAll('li'))
-    
     if(document.querySelectorAll('li') && arr.length > 0){
       for(let i = 0; i < arr.length;i++){
         arr[i].classList.remove('border')
       }
       arr[sum].classList.toggle('border')
-      console.log(sum)
-      if(sum == 0){
+      if(sum <= 0){
         sum = arr.length
       }
       sum--
-      console.log(sum)
     }
   })
 }
@@ -110,9 +98,6 @@ test()
 
 
 // Дальнейший код это слезы и боль, останется на память
-
-
-
 
 
 // function backChange (){
