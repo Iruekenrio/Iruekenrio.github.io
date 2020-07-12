@@ -1,9 +1,4 @@
 
-
-
-
-
-
 .banner {
     position: relative;
     .slider__item {
@@ -146,12 +141,17 @@
 
 @media(max-width: 768px) {
     .banner {
-        .bigText {
-            font-size: 35px;
+        .slider {
+            .slider__item {
+                .bigText {
+                    font-size: 35px;
+                }
+                .smallText {
+                    font-size: 16px;
+                }
+            }
         }
-        .smallText {
-            font-size: 16px;
-        }
+       
         .slick-dots {
             right: 4%;
         }
@@ -161,16 +161,24 @@
 @media(max-width: 568px) {
     
     .banner {
-        .bigText {
-            width: 370px;
+        .slider {
+            .slider__item {
+                .content {
+                    .bigText {
+                        width: 370px;
+                    }
+                    .smallText {
+                        width: 370px;
+                    }
+                    .img {
+                        width: 260px;
+                        height: 150px;
+                    }
+                }
+            }
         }
-        .smallText {
-            width: 370px;
-        }
-        .img {
-            width: 260px;
-            height: 150px;
-        }
+        
+        
         .slick-dots {
             right: 5%;
             button {
@@ -181,31 +189,34 @@
 }
 @media(max-width: 480px) {
     .banner {
-        .content {
-            margin-top: 15px;
+        .slider {
+            .slider__item {
+                .content {
+                    margin-top: 15px;
+                    .bigText {
+                        width: 85%;
+                        margin-bottom: 20px;
+                        font-size: 19px;
+                        line-height: 25px;
+                        height: 50px;
+                        margin-top: 10px;
+                    }
+                    .smallText {
+                        width: 90%;
+                        padding-bottom: 20px;
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                    .img {
+                        width: 190px;
+                        height: 110px;
+                    }
+                }
+            }
         }
-        // .flexcontainer{
-        //     display: flex;
-        //     justify-content: center;
-        // }
-        .bigText {
-            width: 85%;
-            margin-bottom: 20px;
-            font-size: 19px;
-            line-height: 25px;
-            height: 50px;
-            margin-top: 10px;
-        }
-        .smallText {
-            width: 90%;
-            padding-bottom: 20px;
-            font-size: 14px;
-            line-height: 20px;
-        }
-        .img {
-            width: 190px;
-            height: 110px;
-        }
+        
+
+       
         .slider__item__button .link {
             font-size: 11px;
             padding: 10px 10px;

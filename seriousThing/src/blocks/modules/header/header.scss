@@ -114,19 +114,16 @@
     }
     
    
-    .headerBack {
-        height: 115px;
-    }
-   
-    .active {
+    
+    
+    
+    section.header.active {
         .menu__list {
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
             margin-top: 20px;
             margin-left: 10px;
-            // background-color: rgba(0, 0, 0, 0.329);
-            // backdrop-filter: blur(10px);
             .menu__list__item {
                 align-self: center;
                 margin: 10px 10px;
@@ -144,6 +141,9 @@
             top: 30px;
             left: 8%;
             color: #ffffff;
+        }
+        &.headerBack {
+            height: 115px;
         }
     }
 }
