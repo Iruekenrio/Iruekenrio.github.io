@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+html(lang="ru")
+	include global/head
+	+head(
+		'Сайт | Страница со всеми ui компонентами'
+	)
+	include mixin/all-mixin
+	body
+		include global/header
+		.wrapper
+			+breadcrumbs()
+				li: a(href="./") Главная
+				li Страница
+			.container
+				h1 h1/30px
+				h2 h2/24px
+				h3 h3/18px
+				h4 h4/16px
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				ul
+					li Пункт1
+					li Пункт2
+					li Пункт3
+					li Пункт4
+					li Пункт5
+					li: a(href="#") Ссылка
+				br
+				br
+				a(href="#").btn.btn_default Кнопка
+				br
+				br
+				.form-group
+					input.checkbox-input(id="check1" type="checkbox" name="check1")
+					label.checkbox-label(for="check1") Одновременно отправить заявку на расчёт стоимости
+				br
+				fieldset.fieldset-group.form-group
+					legend.form-lagend.left Необходимость возврата очищенного воздуха в рабочую зону:
+					.wrap-radio
+						input.radio-input(id="radio1" type="radio" name="radio-check" checked)
+						label.radio-label(for="radio1") Да
+					.wrap-radio
+						input.radio-input(id="radio2" type="radio" name="radio-check")
+						label.radio-label(for="radio2") Нет
+				br
+				br
+				include global/pagination
+				br
+		include global/footer
+		include global/scripts
+		include pages/pages

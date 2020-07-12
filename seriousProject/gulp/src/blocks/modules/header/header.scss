@@ -1,0 +1,133 @@
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+   
+}
+.menu{
+    width: 53%;
+}
+
+.menu__list{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.menu__list__item{
+    display: inline-block;
+    margin: 50px 0;
+    position: relative;
+    .link{
+        // position: relative;
+        text-decoration: none;
+        // background: linear-gradient(to top, #a8a6a6e7 30%, #ffffffd5 50%, #ffffff 100%);
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+        line-height: 16px;
+        font-family: 'Roboto';
+        font-weight: normal;
+        // text-shadow: 0px 0px 2px;
+        // -webkit-text-stroke:  0.02em #d6d6d6a4;
+    }
+}
+.flexContainer{
+    @include dFlex(space-between, unset, unset, unset)
+    
+}
+.wrapper{
+    @include wrapper(0, 7%)
+}
+
+.logo-img{
+    margin-top: 20px;
+}
+.contact{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    margin: 35px 47px;
+    color: #FFFFFF;
+    text-align: center;
+    width: 118px;
+    height: 28px;
+    padding-top: 10px;
+    background: #329B87;
+    border-radius: 30px;
+    border-style: groove;
+    .link{
+        position: relative;
+        text-decoration: none;
+        color: #FFFFFF;font-size: 14px;
+        line-height: 16px;
+        &:before{
+            content: "";
+            position: absolute;
+            box-shadow: 0 6px 17px 9px #329b88b7;
+            width: 100%;
+            height: 20px;
+            bottom: 0;
+        }
+    }
+}
+.burger{
+    display: none;
+}
+.burger-active{
+    display: none;
+}
+
+
+
+
+@media(max-width: 768px){
+    .menu{
+        position: relative;
+    }
+    .burger{
+       color: #FFFFFF; 
+       position: absolute;
+       right: 10%;
+       top: 30px;
+       display: block;
+    }
+    .menu__list{
+        display: none;
+    }
+    .active{
+        .menu__list{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            margin-top: 20px;
+            margin-left: 10px;
+            background-color: rgba(0, 0, 0, 0.329);
+            .menu__list__item{
+                margin: 10px 10px;
+                align-self: center;
+            }
+        }
+        .menu{
+            position: relative;
+        }
+        .burger{
+           display: none;
+        }
+        .burger-active{
+            color: #FFFFFF; 
+            position: absolute;
+            right: 10%;
+            top: 30px;
+            display: block;
+        }
+    }
+        
+    .menu__list__item{
+        .link{
+            font-size: 12px;
+        }
+    }
+    
+    
+}

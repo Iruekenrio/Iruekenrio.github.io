@@ -1,0 +1,351 @@
+
+.main {
+    @include wrapper(0, 7%);
+    .tour {
+        @include dFlex(space-between,center,unset,wrap);
+        .tour__title {
+            width: 100%;
+            text-align: center;
+            font-family: Roboto, sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 42px;
+            text-transform: uppercase;
+            color: #32469b;
+            margin: 50px;
+        }
+        .tour__item {
+            display: flex;
+            align-items: flex-end;
+            width: 30%;
+            height: 439px;
+            border-radius: 20px;
+            .tour__item__container {
+                width: 100%;
+                padding: 20px 20px 10px 20px;
+                background: #329b87;
+                border-radius: 0 0 20px 20px;
+                .img {
+                    position: relative;
+                    top: 10px;
+                    width: 30px;
+                }
+                .link {
+                    text-decoration: none;
+                }
+            }
+        }
+        .first-card {
+            background-image: url(../../../img/svg/italy.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .second-card {
+            background-image: url(../../../img/svg/fran.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            align-items: flex-start;
+            .tour__item__container {
+                border-radius: 20px 20px 0 0;
+            }
+        }
+        .third-card {
+            background-image: url(../../../img/svg/turk.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .tour__item-title {
+            font-family: Roboto, serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            color: #ffffff;
+            /* identical to box height */
+            text-transform: uppercase;
+        }
+        .tour__item-text {
+            font-family: Roboto, serif;
+            font-size: 18px;
+            line-height: 21px;
+            color: #ffffff;
+            .fas {
+                margin-left: 5px;
+            }
+        }
+        .tour__button {
+            // text-align: center;
+            display: flex;
+            align-items: center;
+            // width: 225px;
+            position: relative;
+            height: 50px;
+            margin: 55px auto;
+            padding: 0 45px;
+            background: #32469b;
+            border-radius: 30px;
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: 10px;
+                left: 20px;
+                width: 85%;
+                height: 6px;
+                box-shadow: 0 7px 20px 6px #32459b9a;
+            }
+            .link {
+                text-decoration: none;
+                color: #ffffff;
+                text-align: center;
+                font-family: Roboto, serif;
+                font-size: 14px;
+                line-height: 16px;
+                .img {
+                    position: relative;
+                    top: 10px;
+                    width: 30px;
+                }
+            }
+        }
+    }
+    .slick-next, .slick-prev {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border: none;
+        text-indent: -9999px;
+        background: none;
+    }
+    .rightW {
+        position: absolute;
+        top: 58%;
+        right: -8%;
+        width: 50px;
+        height: 50px;
+        background-image: url(../../../img/svg/right.png);
+        // background-size: cover;
+    }
+    .leftW {
+        position: absolute;
+        top: 58%;
+        left: -6%;
+        width: 35px;
+        height: 35px;
+        background-image: url(../../../img/svg/left.png);
+        // background-size: cover;
+    }
+    .slick-list {
+        overflow: hidden;
+    }
+}
+
+.country {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    // width: 100%;
+    height: 330px;
+    margin: 25px;
+    .country__name {
+        width: 100%;
+        margin-bottom: 50px;
+        text-align: center;
+        font-family: Roboto, serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 42px;
+        color: #32469b;
+    }
+    .country__button-left {
+        position: absolute;
+        top: 190px;
+        left: -65px;
+    }
+    .country__button-right {
+        position: absolute;
+        top: 190px;
+        right: -75px;
+    }
+    .country__slider {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .country__slider-item {
+        background-size: cover;
+        border-radius: 20px 0;
+        width: 20%;
+        height: 235px;
+        .hidden-text {
+            margin-top: 50px;
+            .link {
+                padding: 10px 10px;
+                text-decoration: none;
+                color: #ffffff;
+                font-family: Roboto, serif;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 21px;
+                background-color: #329b87;
+                border-top-right-radius: 30px;
+                border-bottom-right-radius: 30px;
+            }
+        }
+    }
+    .egypt {
+        background-image: url(../../../img/svg/egypit.jpg);
+    }
+    .newZeland {
+        background-image: url(../../../img/svg/zeland.png);
+    }
+    .greece {
+        background-image: url(../../../img/svg/greece.png);
+    }
+    .philippines {
+        background-image: url(../../../img/svg/philippines.png);
+    }
+}
+
+
+
+
+
+
+.country .slick-slide {
+    margin: 0 20px;
+}
+
+.slick-track {
+    display: flex;
+}
+
+@media(max-width: 1200px) {
+    .main {
+        .tour {
+            .tour__item-title {
+                font-size: 14px;
+            }
+            .tour__item-text {
+                font-size: 12px;
+            }
+            .img {
+                width: 10px;
+            }
+        }
+    }
+    
+    .country {
+        margin-top: 0;
+    }
+}
+@media (max-width: 992px) {
+    .main {
+        .tour {
+            .tour__item-title {
+                line-height: 18px;
+            }
+            .tour__item-text {
+                line-height: 15px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+            .tour__title {
+                font-size: 25px;
+                margin: 30px;
+            }
+            .tour__button {
+                margin: 30px auto;
+                margin-top: 40px;
+            }
+        }
+    }
+    
+    .country {
+        padding: 0 15px;
+        .country__name {
+            font-size: 25px;
+            margin: 0;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .main {
+        .tour {
+            .tour__item {
+                height: 350px;
+            }
+            .tour__item-title {
+                font-size: 11px;
+            }
+            .tour__item-text {
+                font-size: 9px;
+            }
+        }
+    }
+}
+@media(max-width: 568px) {
+    .main {
+        .tour {
+            // justify-content: center;
+            .tour__item {
+                width: 32.5%;
+                height: 270px;
+                .tour__item__container {
+                    padding: 9px;
+                }
+            }
+            .tour__button {
+                height: 40px;
+            }
+        }
+        .country {
+            .country__name {
+                font-size: 25px;
+            }
+            .country__slider-item {
+                height: 200px;
+            }
+            .rightW {
+                right: -10%;
+            }
+        }
+    }
+}
+    
+
+@media(max-width: 480px) {
+    .main {
+        .tour {
+            .tour__title {
+                font-size: 20px;
+                margin: 20px;
+            }
+            .tour__item {
+                width: 100%;
+                height: 200px;
+                margin: 10px 50px;
+                margin-top: 0;
+            }
+            .second-card {
+                align-items: flex-end;
+                .tour__item__container {
+                    border-radius: 0 0 20px 20px;
+                }
+            }
+        }
+        .country {
+            .rightW {
+                right: -17%;
+            }
+            .leftW {
+                left: -13%;
+            }
+            .country__name {
+                font-size: 20px;
+            }
+        }
+    }
+}
+    

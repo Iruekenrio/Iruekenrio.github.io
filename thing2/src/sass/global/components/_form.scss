@@ -1,0 +1,103 @@
+/*----------------------------------------
+	FORM
+----------------------------------------*/
+.form{
+	position: relative;
+	display: block;
+	width: 100%;
+	&.form_horizontal{
+		//flexbox
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
+.form-group{
+	position: relative;
+	&:not(:last-child){
+		margin-bottom: $group-margin-bottom;
+	}
+}
+.form-group_required{
+	&:after{
+		content: '*';
+		color: $color-danger;
+		@include font-size(16px);
+		font-style: italic;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+	}
+}
+.forn-group__text{
+	display: block;
+	margin: 0;
+	color: #5e5d63;
+	@include font-size(11px);
+	font-style: italic;
+	line-height: 1;
+	text-align: left;
+  @include mq ('tablet','max') {
+		margin-bottom: 50px;
+	}
+}
+.form__title{
+	margin-top: 0;
+	margin-bottom: 15px;
+	color: $color-black;
+	font-family: $font-family-yeseone;
+	@include font-size(30px);
+	line-height: 1.2;
+	font-weight: 400;
+  @include mq ('desktop','max') {
+		@include font-size(28px);
+	}
+}
+/*
+STYLE FOR INPUT
+*/
+.form-input{
+	width: input(width);
+	height: input(height);
+	padding: input(padding);
+	font-family: input(font-family);
+	@include font-size(input(font-size));
+	color: input(color);
+	font-weight: input(font-weight);
+	font-style: input(font-style);
+	background-color: input(background);
+	border:input(border);
+	// border-radius:  input(border-radius);
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	@include box-sizing(border-box);
+	@include placeholder {
+		color: input(placeholder);
+		transition: input(transition);
+	}
+	&:focus{
+		outline: none;
+		@include placeholder {
+			color: transparent;
+			transition: input(transition);
+		}
+		+ span.error{
+			opacity: 0;
+		}
+	}
+	&.error{
+		border-color: $color-danger;
+		@include placeholder {
+			color: transparent;
+			transition: input(transition);
+		}
+		&:focus{
+			outline: none;
+			+ span.error{
+				opacity: 0;
+			}
+		}
+	}
+}
+/* end forms */

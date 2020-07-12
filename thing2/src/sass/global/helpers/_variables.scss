@@ -1,0 +1,173 @@
+@import "_functions.scss";
+//
+//1. FONTS
+//
+
+//NEW INCLUDE FONTS FROM MIXIN
+@include font-face('Roboto', '../fonts/Roboto-Light', 300, normal, eot woff2 woff ttf);
+
+$font-family-main: Georgia, Times, "Times New Roman", serif;
+$font-family-roboto: 'Roboto', sans-serif;
+$font-family-title: $font-family-roboto;
+//other fonts
+// $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+// $font-family-serif:       Georgia, "Times New Roman", Times, serif;
+
+//SIZE
+$font-size-main: 14px;
+$font-size-title: 60px;
+$font-size-h1: $font-size-title;
+$font-size-h2: 36px;
+$font-size-h3: 30px;
+$font-size-h4: 24px;
+
+//LINE HEIGHT
+$line-height-main: 1.6;
+$line-height-title: $line-height-main;
+
+//WEIGHT
+$font-weight-main: 400;
+$font-weight-title: 700;
+
+//
+//2. COLORS
+//
+
+$color-main: #c60000;
+$color-white: #fff;
+$color-gray: #f8f8f8;
+
+$color-danger: $color-main;
+$color-success: green;
+$color-warning: yellow;
+
+$color-text: $color-black;
+$color-title: $color-black;
+$color-link: $color-text;
+$color-link-hover: darken($color-link, 10%);
+
+$background-body: $color-gray;
+
+//
+//3. BUTTONS
+//
+
+// default
+
+$button: (
+	max-width: 100%,
+	min-width: 200px,
+	padding: 0 10px,
+	height: 57px,
+	line-height: 55px,
+	font-family: $font-family-roboto,
+	font-size: 16px,
+	font-weight: 300,
+	border-width: 1px,
+	border-radius: 3px,
+	border-color: $color-main
+);
+
+//width: button(width);
+
+//primary
+$btn-primary-bg: $color-main-161;
+$btn-primary-bgHover: $color-main;
+$btn-primary-bgActive: lighten($color-main, 10%);
+
+$btn-primary-color: #fff;
+$btn-primary-colorHover: #fff;
+$btn-primary-colorActive: #fff;
+
+$btn-primary-border: btn(border-width) solid $btn-primary-bg;
+$btn-primary-borderHover: btn(border-width) solid $btn-primary-bgHover;
+$btn-primary-borderActive: btn(border-width) solid $btn-primary-bgActive;
+
+
+//secondary
+$btn-secondary-bg: transparent;
+$btn-secondary-bgHover: $color-main;
+$btn-secondary-bgActive: $color-main-180;
+
+$btn-secondary-color: $color-black;
+$btn-secondary-colorHover: $color-gray;
+$btn-secondary-colorActive: $color-gray;
+
+$btn-secondary-border: btn(border-width) solid $color-black;
+$btn-secondary-borderHover: btn(border-width) solid $btn-secondary-bgHover;
+$btn-secondary-borderActive: btn(border-width) solid $btn-secondary-bgActive;
+
+
+
+
+//
+//4.FORMS
+//
+
+$form-width: 100%;
+$form-bg: #fff;
+$group-width:100%;
+$group-margin-bottom: 15px;
+
+//inputs
+
+$input: (
+	width: 100%,
+	height: 56px,
+	padding: 0 10px 0px 12px,
+	font-family: $font-family-main,
+	font-size: $font-size-main,
+	font-weight: $font-weight-main,
+	font-style: italic,
+	color: $color-gray-light,
+	border: 1px solid $color-black-4,
+	border-radius: 0,
+	placeholder: $color-gray-light,
+	transition: all .3s,
+	background: transparent,
+
+	black-color: $color-gray-light,
+	black-background: $color-black
+);
+//width: input(width);
+
+ //textarea
+$textarea: (
+	width: 100%,
+	height: 150px,
+	padding: 12px,
+	font-family: $font-family-main,
+	font-size: $font-size-main,
+	font-weight: $font-weight-main,
+	font-color: $color-gray-light,
+	border: 1px solid $color-black-4,
+	border-radius: 0,
+	placeholder: $color-gray-light,
+	transition: all .3s,
+	background: transparent
+);
+
+//
+// 5. @MEDIA QUERIES
+//
+$breakpoints: (
+	"phone":   481px,
+	"tablet-small": 601px,
+	"tablet":       768px,
+	"laptop":      980px,
+	"desktop":      1366px,
+	"desktop-max":      1920px,
+);
+// @include mq('tablet-wide') {}
+
+//
+// 6. Z-INDEX ELEMENTS
+//
+
+$z-layers: (
+	back: -1,
+	default: 1,
+	button: 3
+);
+
+// z-index: z(overlay);

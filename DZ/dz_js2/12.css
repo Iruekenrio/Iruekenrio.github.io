@@ -16,3 +16,16 @@ li{
 .border{
     border: 1px solid red;
 }
+.test{
+    color: blue;
+    display: none;
+}
+
+
+/* h2{
+        /* display: inline-block;
+        margin: 0 0.5rem; */
+      
+        /* animation: bounce; referring directly to the animation's @keyframe declaration */
+        /* animation-duration: 4s; don't forget to set a duration! */
+/* }  */

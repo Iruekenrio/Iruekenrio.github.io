@@ -1,6 +1,7 @@
 
 let body = document.querySelector('body')
 let div = document.createElement('div')
+let list = document.querySelector('ul')
 function getButtons(tag){
     tag.classList.add('buttons')
     body.append(div)
@@ -39,6 +40,7 @@ function test (){
         sum = 0;
         sum2 = 0;
       }
+      arr[0].classList.add('border')
     }
     // console.log('test')
     })
@@ -54,10 +56,60 @@ function test (){
           sum = 0;
           sum2 = 0;
         }
+        arr[0].classList.add('border')
       }
       
     })
 }
+
+let next = document.querySelector('.next')
+let prev = document.querySelector('.prev')
+
+function border(){
+  let list = document.querySelector('ul')
+  li = list.querySelectorAll("li");
+  li[sum].classList.add("border");
+  console.log(li)
+  console.log(sum, 'border')
+}
+// next.onclick = function next() {
+//   let list = document.querySelector('ul')
+//   li = list.querySelectorAll("li");
+//   // console.log(sum)
+//   if(li.length > 0){
+//     if(sum<li.length-1){       
+//       li[sum].classList.remove("border");
+//      sum++;
+//      li[sum].classList.add("border");
+//      // console.log(sum, '++') 
+//      // console.log(li[sum], 'li') 
+//    }else{
+//      li[sum].classList.remove("border");
+//      // console.log(sum, 'asd') 
+//       sum = 0;
+//       border();
+//    }
+//   }
+
+// }
+
+// prev.onclick = function prev(){
+//   let list = document.querySelector('ul')
+//   li = list.querySelectorAll("li");
+//   if(li.length > 0){
+//     if(sum !==0){
+//       li[sum].classList.remove("border");
+//       sum--;
+//       li[sum].classList.add("border");
+//   }else{
+//       li[sum].classList.remove("border");
+//       console.log(li.length-1)
+//       sum = li.length-1;
+//       border();
+//   }
+//   }
+ 
+// }
 
 
 function nextButton(){
@@ -67,11 +119,21 @@ function nextButton(){
       for(let i = 0; i < arr.length;i++){
         arr[i].classList.remove('border')
       }
-      arr[sum].classList.toggle('border')
-      sum++
-      if(sum == arr.length){
+      if(sum<arr.length - 1){
+        sum++
+        arr[sum].classList.add('border')
+        // console.log(sum)
+        
+      }else{
+        arr[sum].classList.remove('border') 
         sum = 0
+        arr[sum].classList.add('border')
+        // border()
       }
+      
+      // if(sum == arr.length){
+      //   sum = 0
+      // }
     }
   })
   document.querySelector('.prev').addEventListener('click', function(){
@@ -80,11 +142,15 @@ function nextButton(){
       for(let i = 0; i < arr.length;i++){
         arr[i].classList.remove('border')
       }
-      arr[sum].classList.toggle('border')
-      if(sum <= 0){
-        sum = arr.length
+      if(sum !== 0){
+        sum--
+        arr[sum].classList.add('border')
+      }else{
+        arr[sum].classList.remove('border')
+        sum = arr.length - 1
+        arr[sum].classList.add('border')
       }
-      sum--
+      
     }
   })
 }
@@ -176,3 +242,10 @@ test()
 
 
 // console.log(wot > 0)
+let input = document.querySelector('input')
+let tesst = document.querySelector('.test')
+
+input.addEventListener('click', function(){
+  console.log('qwe2')
+  tesst.classList.toggle('test')
+})
