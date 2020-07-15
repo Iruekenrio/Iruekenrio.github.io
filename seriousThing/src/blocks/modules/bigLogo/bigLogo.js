@@ -36,7 +36,7 @@ $(document).ready(function() {
         arrows:false,
         dots: true,
         infinite: true,
-        autoplay: 1500,
+        // autoplay: 1500,
         speed: 1000,
         slidesToShow: 1,
         adaptiveHeight: true,

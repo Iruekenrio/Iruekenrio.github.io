@@ -55,7 +55,7 @@
                 margin-top: 55px;
                 .link {
                     position: relative;
-                    border: 1px solid rgba(255, 255, 255, 0.678);
+                    // border: 1px solid rgba(255, 255, 255, 0.678);
                     padding: 15px 15px;
                     text-decoration: none;
                     background: #32469b;
@@ -204,7 +204,7 @@
                     .smallText {
                         width: 90%;
                         padding-bottom: 20px;
-                        font-size: 14px;
+                        font-size: 10px;
                         line-height: 20px;
                     }
                     .img {
@@ -222,7 +222,92 @@
             padding: 10px 10px;
         }
     }
+    .banner__social {
+        width: 70px;
+        .banner__social-items {
+            .img {
+                width: 13px;
+            }
+            &:nth-child(2) {
+                .img {
+                    width: 7px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-height: 768px) {
+    .banner {
+        .slider {
+            .slider__item {
+                .bigText {
+                    width: 400px;
+                    height: 25px;
+                    font-size: 25px;
+                    line-height: 25px;
+                }
+                .smallText {
+                    font-size: 10px;
+                    width: 400px;
+                }
+                .img {
+                    width: 240px;
+                    height: 140px;
+                }
+                .slider__item__button {
+                    font-size: 10px;
+                    height: 30px;
+                    margin-top: 30px;
+                    .link {
+                        padding: 8px;
+                        &::before {
+                            z-index: -1;
+                            bottom: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-height: 480px) {
+    .banner {
+        .slider {
+            .slider__item {
+                .content {
+                    .bigText {
+                        font-size: 16px;
+                        width: 280px;
+                    }
+                    .smallText {
+                        font-size: 10px;
+                        width: 280px;
+                    }
+                    .img {
+                        width: 150px;
+                        height: 90px;
+                    }
+                }
+            }
+        }
+    }
+    .banner__social {
+        width: 70px;
+        .banner__social-items {
+            .img {
+                width: 13px;
+            }
+            &:nth-child(2) {
+                .img {
+                    width: 7px;
+                }
+            }
+        }
+    }
 }
 
 
-   
+
+

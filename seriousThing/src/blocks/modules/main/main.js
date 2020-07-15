@@ -44,7 +44,7 @@ if (userWidth < 1200 && userWidth > 768){
   count = 3
 }else if(userWidth < 768 && userWidth > 568){
   count = 2
-}else if(userWidth < 568 && userWidth > 480){
+}else if(userWidth < 569 && userWidth > 480){
   count = 1
   tumb = true
 }else if(userWidth < 480){
@@ -67,3 +67,4 @@ $(document).ready(function() {
       });
     }
 });
+console.log(count)
