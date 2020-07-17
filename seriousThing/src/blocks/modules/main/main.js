@@ -58,7 +58,7 @@ $(document).ready(function() {
         // dots: true,
         infinite: true,
         centerMode: tumb,
-        // autoplay: 1500,
+        autoplay: 1500,
         speed: 1000,
         slidesToShow: count,
         adaptiveHeight: true,

@@ -348,4 +348,49 @@
         }
     }
 }
-    
+
+@media(max-height: 480px) {
+    .main {
+        .tour {
+            .tour__item {
+                height: 270px;
+            }
+            .tour__title {
+                font-size: 15px;
+                margin: 15px;
+            }
+            .tour__button {
+                height: 30px;
+                margin: 25px auto;
+                padding: 0 25px;
+                .link {
+                    font-size: 10px;
+                }
+                &::before {
+                    left: 10px;
+                    z-index: -1;
+                }
+            }
+        }
+        .country {
+            height: 290px;
+            .rightW {
+                top: 50%;
+                right: -10%;
+                width: 40px;
+                height: 40px;
+                background-size: cover;
+            }
+            .leftW {
+                top: 50%;
+                left: -8%;
+                width: 27px;
+                height: 27px;
+                background-size: cover;
+            }
+            .country__name {
+                font-size: 15px;
+            }
+        }
+    }
+}
