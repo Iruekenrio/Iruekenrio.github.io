@@ -54,36 +54,3 @@ dropBox.addEventListener('dragover', function(e){
 
 
 
-
-// var dragObject = {};
-
-// document.onmousedown = function(e) {
-
-//   if (e.which != 1) { // если клик правой кнопкой мыши
-//     return; // то он не запускает перенос
-    
-//   }
-
-//   var elem = e.target.closest('.draggable');
-// //   console.log(elem)
-
-//   if (!elem) return; // не нашли, клик вне draggable-объекта
-
-//   // запомнить переносимый объект
-//   dragObject.elem = elem;
-
-//   // запомнить координаты, с которых начат перенос объекта
-//   dragObject.downX = e.pageX;
-//   dragObject.downY = e.pageY;
-// //   console.log(dragObject)
-// }
-
-// document.onmousemove = function(e) {
-//     if (!dragObject.elem) return; // элемент не зажат
-  
-//     if (!dragObject.avatar) { // элемент нажат, но пока не начали его двигать
-//     //   ...начать перенос, присвоить dragObject.avatar = переносимый элемент
-//     }
-//     console.log(dragObject.avatar, 'avatar')
-//     // ...отобразить перенос элемента...
-// }
