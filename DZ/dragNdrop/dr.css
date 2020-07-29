@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+.draggable {
+    /* width: 150px;
+    height: 50px; */
+    padding: 10px;
+    /* padding-left: 0; */
+    border: grey 1px solid;
+
+    border-radius: 5px;
+ z-index: 3;
+}
+.droppable {
+    position: absolute;
+    margin-left: 20px;
+    width: 250px;
+    height: 300px;
+    border: 1px black dotted;
+    top: 10px;
+    right: 18%;
+    
+    /* background-color: rgb(218, 174, 174); */
+}
