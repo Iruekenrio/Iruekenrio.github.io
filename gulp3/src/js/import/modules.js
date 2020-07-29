@@ -1,5 +1,0 @@
-import "%modules%/header/header";
-import "%modules%/footer/footer"
-import "%modules%/bigLogo/bigLogo";
-import "%modules%/main/main";
-import "%modules%/contactUs/contactUs";

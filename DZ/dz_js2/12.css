@@ -29,3 +29,17 @@ li{
         /* animation: bounce; referring directly to the animation's @keyframe declaration */
         /* animation-duration: 4s; don't forget to set a duration! */
 /* }  */
+
+.container {
+    position: fixed;
+    top: 30px;
+    left: 100px;
+}
+.dot {
+    width: 30px;
+    height: 30px;
+    background-color: cadetblue;
+}
+.active-dot {
+    background-color: cornflowerblue;
+}

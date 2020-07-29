@@ -22,8 +22,8 @@ buyCounter.innerText = buyDevices.reduce(
   0
 );
 
-console.log(buyDevicesObject[564])
-// console.log(Object.keys(buyDevicesObject))
+// console.log(buyDevicesObject[564])
+// console.log(typeof(buyDevices))
 
 // объект с данными 
 
@@ -102,7 +102,6 @@ function addToCart(id){
   }else{
     buyDevicesObject[id] = 1
   }
-
   const buyDevices = Object.keys(buyDevicesObject);
   buyCounter.innerText = buyDevices.reduce(
     (x, key) => x + buyDevicesObject[key],
@@ -125,8 +124,10 @@ function toggle(e) {
       break
     case 'none':
       modal.style.display = 'flex';
+      
   }
 }
+
 
 document.querySelector(".modal-window").onclick = toggle;
 document.querySelector(".close").onclick = toggle;
@@ -136,4 +137,173 @@ document.querySelector(".cart").onclick = function (event) {
   toggle(event);
 }
 
-// localStorage.clear()
+
+
+let namesObj = []
+phones.forEach(function(e, i) {  
+  for(let key in buyDevicesObject){
+    if (key == e.id){
+      let newObj = {
+        name: e.name,
+        price: e.price,
+        count: buyDevicesObject[key],
+        id: key
+      }
+      namesObj.push(newObj)
+    }
+  }
+})
+console.log(buyDevicesObject)
+
+
+let tbody = document.querySelector("tbody");
+function magic(item){
+  // const gettCount = localStorage.getItem("namesObj")
+  // ? JSON.parse(localStorage.getItem("namesObj"))
+  // : {};
+  // console.log(gettCount, 'getc')
+  // tbody.innerHTML = ''
+  for(let i = 0; i < namesObj.length; i++){
+    let tr = document.createElement('tr')
+    tr.setAttribute(`data-id`, `${namesObj[i].name}`)
+    tbody.append(tr)
+    let tdInner = '';
+    console.log(item)
+    tdInner += `
+    <td>${item[i].name}</td>
+    <td>${item[i].count}</td>
+    <td>${Math.ceil((item[i].price * item[i].count)*100)/100}</td>
+    <td><button class = "buttonPlus" id = "${item[i].name}">+</button></td>
+    <td><button class = "buttonMinus" id = "${item[i].name}">-</button></td>
+    `;
+    
+    tr.innerHTML = tdInner;
+    // console.log(namesObj[i].name)
+    
+  }
+}
+magic(namesObj)
+
+
+
+
+
+
+// let cartClick = document.querySelector('.cart').addEventListener('click', function(){
+//   let retroObj = []
+//   phones.forEach(function(e, i) {  
+//     for(let key in buyDevicesObject){
+//       if (key == e.id){
+//         let newObj = {
+//           name: e.name,
+//           price: e.price,
+//           count: buyDevicesObject[key]
+//         }
+//         retroObj.push(newObj)
+//       }
+//     }
+//   })
+//   tbody.innerHTML = ''
+//   magic(retroObj)
+//   console.log(retroObj)
+//   // plusClick()
+//   console.log('mago')
+// })
+
+
+
+// function plusClick(){
+//   let allButtonsPlus = document.querySelectorAll('.buttonPlus')
+// allButtonsPlus.forEach(function(elem){
+//   console.log(elem)
+//   // addToCart()
+//   elem.addEventListener('click', function(){
+//     namesObj.forEach(function(element){
+//       // console.log(element.price, 'qwe')
+//       element.price++
+//       element.price--
+//       let sum = element.price
+//       if (element.name == elem.id){
+//         element.count++;
+//         sum = element.price * element.count
+//         // console.log(elem, '123')
+//         let trDataId = document.querySelectorAll(`tr[data-id]`)
+//         trDataId.forEach(function(i){
+//           if(i.getAttribute('data-id') == elem.id){
+//             // console.log(i.children[1])
+//             i.children[1].innerHTML = `${element.count}`
+//             i.children[2].innerHTML = `${Math.ceil((sum)*100)/100}`
+//           }
+//         })
+//         buyCounter.innerText = (buyCounter.innerText * 1) + 1;
+//         console.log(buyCounter.innerText)
+//         localStorage.setItem('namesObj', JSON.stringify(namesObj))
+//         console.log('click')
+//       }
+//     })
+//   })
+// })
+// }
+let allButtonsPlus = document.querySelectorAll('.buttonPlus')
+allButtonsPlus.forEach(function(elem){
+  elem.addEventListener('click', function(){
+    namesObj.forEach(function(element){
+      // console.log(element.price, 'qwe')
+      element.price++
+      element.price--
+      let sum = element.price
+      if (element.name == elem.id){
+        element.count++;
+        sum = element.price * element.count
+        // console.log(elem, '123')
+        let trDataId = document.querySelectorAll(`tr[data-id]`)
+        trDataId.forEach(function(i){
+          if(i.getAttribute('data-id') == elem.id){
+            // console.log(i.children[1])
+            i.children[1].innerHTML = `${element.count}`
+            i.children[2].innerHTML = `${Math.ceil((sum)*100)/100}`
+          }
+        })
+        buyCounter.innerText = (buyCounter.innerText * 1) + 1;
+        console.log(buyCounter.innerText)
+        localStorage.setItem('namesObj', JSON.stringify(namesObj))
+        console.log('click')
+      }
+    })
+  })
+})
+let allButtonsMinus = document.querySelectorAll('.buttonMinus')
+allButtonsMinus.forEach(function(elem){
+  elem.addEventListener('click', function(){
+    namesObj.forEach(function(element){
+      element.price++
+      element.price--
+      let sum = element.price 
+      if (element.name == elem.id && element.count != 0){
+        element.count--;
+        sum = element.price * element.count
+        // console.log(elem, '123')
+        let trDataId = document.querySelectorAll(`tr[data-id]`)
+        trDataId.forEach(function(i){
+          if(i.getAttribute('data-id') == elem.id){
+            // console.log(i.children[1])
+            i.children[1].innerHTML = `${element.count}`
+            i.children[2].innerHTML = `${Math.ceil((sum)*100)/100}`
+          }
+        })
+        buyCounter.innerText = buyCounter.innerText * 1 - 1 ;
+        localStorage.setItem('namesObj', JSON.stringify(namesObj))
+      }
+    })
+  })
+})
+document.querySelector('.clearButton').addEventListener('click', function(){
+  localStorage.clear()
+  tbody.innerHTML = '';
+  // magic(buyDevicesObject)
+})
+
+
+
+
+

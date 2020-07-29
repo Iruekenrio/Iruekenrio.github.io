@@ -249,3 +249,14 @@ input.addEventListener('click', function(){
   console.log('qwe2')
   tesst.classList.toggle('test')
 })
+
+
+
+let w = innerHeight
+document.addEventListener('scroll', function(){
+  console.log(scrollY)
+})
+console.log(innerHeight)
+// console.log(scrol)
+document.documentElement.clientHeight
+document.documentElement.scrollHeight
