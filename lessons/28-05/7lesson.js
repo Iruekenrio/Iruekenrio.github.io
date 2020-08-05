@@ -400,3 +400,7 @@ randomBackground()
 // let t = document.querySelectorAll('.red')
 // console.log(t)
 // console.log(document.querySelectorAll('.red'))
+
+
+console.log('11' + 1)
+console.log('11' - 1)
