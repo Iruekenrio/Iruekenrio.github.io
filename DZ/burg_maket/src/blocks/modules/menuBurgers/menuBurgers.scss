@@ -1,0 +1,196 @@
+
+@keyframes hiddenText-animation {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.9;
+        height: 100vh;
+    }
+}
+.menuBurgers {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../../../img/svg/menuBack.png);
+    background-size: cover;
+    .big-text-logo {
+        @include adaptiv-font(72, 20);
+        color: #ffffff;
+        font-family: Ubuntu, sans-serif;
+        font-weight: 300;
+        margin-top: 140px;
+        margin-left: 190px;
+    }
+    .wrapper {
+        display: flex;
+        .info {
+            display: flex;
+            &:nth-child(1) .info__name {
+                background-image: url(../../../img/svg/meateater3x.png);
+                background-size: cover;
+            }
+            &:nth-child(2) .info__name {
+                background-image: url(../../../img/svg/vegan@3x.png);
+                background-size: cover;
+            }
+            &:nth-child(3) .info__name {
+                background-image: url(../../../img/svg/diet3x.png);
+                background-size: cover;
+            }
+            &:hover .info__text {
+                display: block;
+            }
+            &:hover .info__name .big-text {
+                color: #f9b43b;
+            }
+            .info__name {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 80px;
+                height: 100vh;
+                .big-text {
+                    @include adaptiv-font(40, 13);
+                    font-weight: 300;
+                    color: #ffffff;
+                    font-family: Ubuntu, sans-serif;
+                    transform: rotate(270deg);
+                    white-space: nowrap;
+                }
+            }
+            .info__text {
+                display: none;
+                width: 25vw;
+                opacity: 0.9;
+                background-color: #333333;
+                padding: 40px 25px;
+                animation-name: hiddenText-animation;
+                animation-duration: 0.5s;
+                .text {
+                    @include adaptiv-font(14, 9);
+                    font-weight: 300;
+                    color: #ffffff;
+                    font-family: Ubuntu, sans-serif;
+                    line-height: 1.71;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .menuBurgers {
+        .wrapper {
+            .info {
+                .info__name {
+                    width: 55px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .menuBurgers {
+        .big-text-logo {
+            margin-top: 90px;
+            margin-left: 100px;
+        }
+        .wrapper {
+            .info {
+                .info__text {
+                    width: 38vw;
+                    padding: 0 15px;
+                }
+                .info__name {
+                    width: 35px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .menuBurgers {
+        height: 80vh;
+        background-position: 30%;
+        .big-text-logo {
+            margin-top: 90px;
+            margin-left: 50px;
+        }
+        .wrapper {
+            .info {
+                .info__text {
+                    width: 32vw;
+                    padding: 5px 10px;
+                    .text {
+                        line-height: 1.1;
+                    }
+                }
+                .info__name {
+                    width: 28px;
+                    height: 80vh;
+                }
+            }
+        }
+    }
+}
+@media (max-height: 420px) {
+    .menuBurgers {
+        .big-text-logo {
+            margin-top: 90px;
+            margin-left: 100px;
+        }
+        .wrapper {
+            .info {
+                .info__text {
+                    width: 38vw;
+                    padding: 0 15px;
+                }
+                .info__name {
+                    width: 35px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-height: 1024px) and (min-width: 768px) {
+    .menuBurgers {
+        height: 80vh;
+        .big-text-logo {
+            margin-top: 90px;
+            margin-left: 50px;
+        }
+        .wrapper {
+            .info {
+                div.info__text {
+                    width: 32vw;
+                    padding: 15px 25px;
+                    .text {
+                        line-height: 1.7;
+                    }
+                }
+                .info__name {
+                    width: 35px;
+                    height: 80vh;
+                }
+            }
+        }
+    }
+}
+@media (min-height: 1024px) and (min-width: 1366px) {
+    .menuBurgers {
+        height: 100vh;
+        .wrapper {
+            .info {
+                .info__name {
+                    height: 100vh;
+                }
+            }
+        }
+    }
+}
+

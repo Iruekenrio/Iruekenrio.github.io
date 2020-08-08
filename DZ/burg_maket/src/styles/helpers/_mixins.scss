@@ -1,0 +1,24 @@
+@mixin wrapper($topBottom, $leftRight) {
+    margin: $topBottom $leftRight;
+}
+@mixin dFlex($jc, $ai, $fDirect, $fWrap) {
+    display: flex;
+    flex-wrap: $fWrap;
+    flex-direction: $fDirect;
+    align-items: $ai;
+    justify-content: $jc;
+}
+@mixin font($fFam, $fSize, $fColor, $fWeight) {
+    font-family: $fFam;
+    font-size: $fSize;
+    color: $fColor;
+    font-weight: $fWeight;
+}
+
+
+$maxWidth: 1950;
+@mixin adaptiv-font($pcSize, $mobSize) {
+    $maxWidth: $maxWidth - 320;
+    $addSize: $pcSize - $mobSize;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}

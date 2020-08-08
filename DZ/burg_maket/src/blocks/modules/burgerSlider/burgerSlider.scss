@@ -1,0 +1,247 @@
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.9;
+    }
+}
+.burgerSlider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../../../img/svg/orangeBackground@3x.png);
+    background-size: cover;
+    .slider-content {
+        display: flex !important;
+        width: 900px !important;
+        height: 450px;
+        margin: 0 auto;
+        .slider-content__item {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            position: relative;
+            width: 50%;
+            // первый итем
+            .composition {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                padding: 10px;
+                background-color: #ea7a32;
+                border-radius: 5px;
+                &:hover .dropdown-composition {
+                    display: block;
+                    animation: opacity 0.3s;
+                }
+                .dropdown-composition {
+                    @include adaptiv-font(13, 8);
+                    display: none;
+                    color: #ffffff;
+                    font-family: Ubuntu, sans-serif;
+                    position: absolute;
+                    top: 0;
+                    left: 90px;
+                    background-color: #f17121a2;
+                    border-radius: 5px;
+                    padding: 7px 20px;
+                }
+                .img {
+                    width: 45px;
+                    margin-bottom: 5px;
+                }
+                .big-text {
+                    @include adaptiv-font(14, 8);
+                    color: #ffffff;
+                    font-family: Ubuntu, sans-serif;
+                    text-align: center;
+                }
+            }
+            .calories {
+                position: absolute;
+                bottom: 0;
+                opacity: 0.5;
+                .img {
+                    width: 50px;
+                }
+                .big-text {
+                    @include adaptiv-font(18, 11);
+                    position: absolute;
+                    top: 25px;
+                    left: 5px;
+                    color: #ffffff;
+                    font-family: Ubuntu, sans-serif;
+                    text-align: center;
+                }
+                .text {
+                    color: #ffffff;
+                    font-size: 14px;
+                    font-family: Ubuntu, sans-serif;
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+            .img-burger {
+                width: 470px;
+            }
+            .item-name {
+                .big-text {
+                    @include adaptiv-font(72, 20);
+                    color: #ffffff;
+                    font-family: Ubuntu, sans-serif;
+                    font-weight: 300;
+                }
+                .text {
+                    @include adaptiv-font(14, 12);
+                    color: #ffffff;
+                    font-family: Ubuntu, sans-serif;
+                    line-height: 1.86;
+                }
+            }
+            .item-cost {
+                display: flex;
+                align-items: flex-end;
+                height: 40px;
+                .big-text {
+                    @include adaptiv-font(72, 20);
+                    position: relative;
+                    bottom: -12px;
+                    color: #e35028;
+                    font-family: Ubuntu, sans-serif;
+                    font-weight: 300;
+                    margin-right: 10px;
+                }
+                .text {
+                    @include adaptiv-font(30, 15);
+                    color: #e35028;
+                    font-family: Ubuntu, sans-serif;
+                    margin: 0;
+                }
+                .buy-button {
+                    @include adaptiv-font(14, 10);
+                    border: none;
+                    padding: 10px 15px;
+                    background-color: #e45028;
+                    color: #ffffff;
+                    font-family: Ubuntu, sans-serif;
+                    border-radius: 5px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    .slick-list {
+        overflow: hidden;
+    }
+    .slick-track {
+        display: flex;
+    }
+    .right-arrow {
+        position: absolute;
+        z-index: 2;
+        right: 10%;
+        width: 25px;
+    }
+    .left-arrow {
+        position: absolute;
+        z-index: 2;
+        left: 10%;
+        width: 25px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .burgerSlider {
+        .slider-content {
+            width: 60vw !important;
+            height: 350px;
+            .slider-content__item {
+                .img-burger {
+                    width: 90%;
+                }
+                .calories {
+                    .big-text {
+                        left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+    .burgerSlider {
+        .left-arrow {
+            width: 16px;
+        }
+        .right-arrow {
+            width: 16px;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .burgerSlider {
+        .slider-content {
+            flex-wrap: wrap;
+            height: auto;
+            .slider-content__item {
+                width: 100%;
+                .item-name {
+                    .text {
+                        line-height: normal;
+                    }
+                }
+                .img-burger {
+                    width: 60%;
+                    margin: 0 auto;
+                }
+                .composition {
+                    padding: 5px;
+                    .img {
+                        width: 20px;
+                    }
+                    .dropdown-composition {
+                        left: 60px;
+                    }
+                }
+                .item-cost {
+                    .big-text {
+                        bottom: -4px;
+                    }
+                }
+                .calories {
+                    .img {
+                        width: 25px;
+                    }
+                    .big-text {
+                        top: 12px;
+                        left: 2px;
+                        font-size: 9px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+    .burgerSlider {
+        .left-arrow {
+            width: 13px;
+        }
+        .right-arrow {
+            width: 13px;
+        }
+        .slider-content {
+            .slider-content__item {
+                .img-burger {
+                    width: 150px;
+                }
+            }
+        }
+    }
+}

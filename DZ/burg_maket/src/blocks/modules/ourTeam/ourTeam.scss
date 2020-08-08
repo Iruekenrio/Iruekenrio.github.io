@@ -1,0 +1,203 @@
+
+@keyframes famous-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.ourTeam {
+    background-image: url(../../../img/svg/teamBackHighQ.png);
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: 50% 50%;
+    .content {
+        position: absolute;
+        right: 0;
+        width: 50vw;
+        height: 100vh;
+        background-color: #242424;
+        opacity: 0.9;
+        padding-left: 7%;
+        padding-top: 5%;
+        padding-right: 6%;
+        .big-text {
+            @include adaptiv-font(72, 20);
+            color: #f9b43b;
+            font-family: Ubuntu, sans-serif;
+            font-weight: 300;
+            margin-bottom: 55px;
+        }
+        .people-list {
+            .peple-list__item {
+                @include adaptiv-font(14, 9);
+                font-family: Ubuntu, sans-serif;
+                list-style: none;
+                color: #ffffff;
+                margin: 25px 0;
+                .pointer {
+                    cursor: pointer;
+                }
+                &:hover {
+                    color: #f9b43b;
+                }
+                .fas {
+                    color: #f9b43b;
+                    margin-right: 10px;
+                }
+                .fa-caret-up {
+                    display: none;
+                }
+                .fa-caret-down {
+                    display: none;
+                }
+                .hidden-item {
+                    display: none;
+                    margin-top: 25px;
+                    margin-bottom: 25px;
+                    .img {
+                        width: 12%;
+                        height: auto;
+                        background-image: url(../../../img/svg/human.png);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        margin-right: 50px;
+                        margin-left: 90px;
+                    }
+                    .bold-text {
+                        @include adaptiv-font(14, 10);
+                        font-family: Ubuntu, sans-serif;
+                        font-weight: 900;
+                        color: #ffffff;
+                    }
+                    .text {
+                        @include adaptiv-font(14, 10);
+                        font-family: Ubuntu, sans-serif;
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.animation-famous {
+    display: flex !important;
+    animation-name: famous-animation;
+    animation-duration: 0.5s;
+}
+.active-arrow {
+    display: inline !important;
+}
+
+@media (max-width: 1200px) {
+    .ourTeam {
+        .content {
+            .people-list {
+                .peple-list__item {
+                    .hidden-item.animation-famous, .hidden-item {
+                        .img {
+                            margin-right: 30px;
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+    .ourTeam {
+        .content {
+            .people-list {
+                .peple-list__item {
+                    .hidden-item.animation-famous, .hidden-item {
+                        justify-content: space-evenly;
+                        .text-block {
+                            width: 70%;
+                        }
+                        .img {
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 568px) {
+    .ourTeam {
+        height: 80vh;
+        .content {
+            width: 65vw;
+            height: 80vh;
+            padding-right: 43px;
+            .people-list {
+                .peple-list__item {
+                    margin: 25px 0;
+                    .hidden-item.animation-famous, .hidden-item {
+                        margin: 10px 0;
+                        .text-block {
+                            width: 70%;
+                        }
+                        .img {
+                            width: 50px;
+                            height: 50px;
+                            margin-right: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-height: 620px) {
+    .ourTeam {
+        height: 100vh;
+        .content {
+            width: 65vw;
+            height: 100vh;
+            padding-right: 43px;
+            .people-list {
+                .peple-list__item {
+                    margin: 10;
+                    .hidden-item.animation-famous, .hidden-item {
+                        margin: 10px 0;
+                        .text-block {
+                            width: 70%;
+                        }
+                        .img {
+                            width: 50px;
+                            height: 50px;
+                            margin-right: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-height: 1024px) and (min-width: 768px) {
+    .ourTeam {
+        height: 80vh;
+        .content {
+            height: 80vh;
+        }
+    }
+}
+
+@media (min-height: 1024px) and (min-width: 1366px) {
+    .ourTeam {
+        height: 100vh;
+        .content {
+            height: 100vh;
+        }
+    }
+}

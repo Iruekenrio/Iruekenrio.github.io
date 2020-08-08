@@ -1,0 +1,46 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 60px;
+    background-color: #131313;
+    .footer__text {
+        .text {
+            margin: 5px;
+        }
+        .address {
+            @include adaptiv-font(14, 10);
+            color: #ffffff;
+            font-family: Ubuntu, sans-serif;
+        }
+        .phone {
+            @include adaptiv-font(14, 10);
+            color: #e45028;
+            font-family: Ubuntu, sans-serif;
+            font-weight: 800;
+        }
+    }
+    .social {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 150px;
+        .socialitem {
+            .img {
+                width: 25px;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .footer {
+        .social {
+            .socialitem {
+                .img {
+                    width: 20px;
+                }
+            }
+        }
+    }
+}
