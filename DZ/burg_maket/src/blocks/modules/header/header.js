@@ -35,17 +35,19 @@ function scrollCheck (it){
         dotsItems.forEach((it) => {it.classList.remove('activeDot')})
         dotsItems[7].classList.add('activeDot')    
     }
-    console.log(it)
+    // console.log(it)
 }
-
-let srolledPercent = (window.scrollY / documentHeight) * 100;
+let heightForDots = documentHeight
+// console.log(heightForDots)
+let srolledPercent = (window.scrollY / heightForDots) * 100;
 window.addEventListener('resize', function(){
-    documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
+    heightForDots = document.documentElement.scrollHeight - document.documentElement.clientHeight
     console.log('test resize')
+    console.log(heightForDots)
 })
 
 window.addEventListener('scroll', function() {
-        srolledPercent = (window.scrollY / documentHeight) * 100
+        srolledPercent = (window.scrollY / heightForDots) * 100
         scrollCheck(srolledPercent)
         console.log('test1') 
 });
