@@ -309,10 +309,15 @@ function dontLooseLogic() {
     } else if(tumbler !== 1){
         let randRow = randomChoice(1, 9)
         console.log(randRow, 'radomRov')
-        if(boxesForAI[randRow-1].innerText == o || boxesForAI[randRow-1].innerText == x) {
-            randRow = randomChoice(1, 9)
-            console.log('new rand')
+        function mustToGetRandom() {
+            if(boxesForAI[randRow-1].innerText == o || boxesForAI[randRow-1].innerText == x) {
+                randRow = randomChoice(1, 9)
+                console.log(randRow,'new rand')
+                return mustToGetRandom()
+            }else return
         }
+        mustToGetRandom()
+        
         function r(it, it2) {
             if(it == it2 && boxesForAI[it-1].innerText !== x && boxesForAI[it-1].innerText !== o){
                 boxesForAI[it-1].innerText = o
