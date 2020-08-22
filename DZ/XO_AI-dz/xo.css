@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+}
+.playGround {
+    display: flex;
+}
+.gameBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black
+}
+.cell {
+    width: 33%;
+    height: 33%;
+    background-color: cadetblue;
+    border: 1px solid black
+}
+.nextTurn {
+    margin: 30px;
+    padding: 20px;
+}
+.infoTable {
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+}
+.turn{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin: 20px;
+    font-size: 25px;
+}
+.turn p {
+    font-size: 85px;
+    color: dimgrey;
+}
+.total{
+    width: 300px;
+    text-align: center;
+}
+.totalBox{
+    display: flex;
+    justify-content: center;
+}
+ul{
+    margin: 10px;
+    padding: 0;
+}
+li{
+    list-style: none;
+    font-size: 25px;
+}
+
+.cell{
+    text-align: center;
+    font-size: 110px;
+}
+.nextRound{
+    margin-top: 40px;
+}
+.hide{
+    display: none;
+}
+span{
+    color: rgb(196, 0, 0);
+    font-size: 20px;
+}
