@@ -77,3 +77,13 @@ closeBurgButton.addEventListener('click', function(){
     closeBurgButton.classList.remove('activeHidden')
     openBurgButton.classList.add('activeHidden')
 })
+
+// // testing code
+
+// let offsetH = document.documentElement.clientHeight
+// console.log(offsetH, 'ofsetH')
+// let screen = document.querySelectorAll('.sector')
+// screen.forEach((item)=>{
+//     item.style.setProperty('--offset-height', offsetH +'px')
+// })
+// // screen.style.setProperty('--offset-height', offsetH / 8 +'px');

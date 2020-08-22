@@ -5,7 +5,7 @@
     flex-wrap: wrap;
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: var(--offset-height);
     .imgFamous {
         position: relative;
         width: 25%;
@@ -77,7 +77,7 @@
             top: 0;
             left: 0;
             width: 100vw;
-            height: 100vh;
+            height: var(--offset-height);
             background-color: #2f3234;
             opacity: 0.8;
         }
@@ -88,13 +88,13 @@
         height: auto;
         .imgFamous {
             width: 50%;
-            height: 25vh;
+            height: calc(var(--offset-height) - (var(--offset-height) * 0.25));
         }
     }
 }
 @media (max-width: 1366px) and (orientation: landscape) {
     .famousComments {
-        height: 100vh;
+        height: var(--offset-height);
         .imgFamous {
             width: 25%;
             height: 50%;

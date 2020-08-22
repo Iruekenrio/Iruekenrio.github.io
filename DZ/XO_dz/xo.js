@@ -86,6 +86,7 @@ function clickEr(clickTarget) {
                 clickTarget.removeEventListener('click',rr)
                 function clickTurn() {
                     buttonTurn.addEventListener('click', function rr() {
+                        
                         if(turn == 5){
                         } else {
                             clickEr(playGround)
@@ -94,11 +95,13 @@ function clickEr(clickTarget) {
                             } else if(turn == 0) {
                                 document.querySelector('.turn p').innerText = o
                             }
+                            enemyBrain()
                             buttonTurn.removeEventListener('click',rr)
                         }
                     })
                 }
                 clickTurn()
+                enemyBrain()
             }    
         }
     })
@@ -119,6 +122,17 @@ document.querySelector('.clearButton').addEventListener('click', function () {
     showTotal()
 })
 
+
+function enemyBrain() {
+    // [[-,-,-],
+    // [-,o,-],
+    // [-,-,x]]
+    console.log('testAi',topArr[1][1].innerText == 0)
+    if(topArr[1][1].innerText == 0 && topArr[1][1].innerText !== x && topArr[1][1].innerText !== o){
+        topArr[1][1].innerText = o
+    }
+    
+}
 
 
 
