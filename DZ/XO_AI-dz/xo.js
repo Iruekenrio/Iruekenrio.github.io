@@ -266,13 +266,13 @@ function dontLooseLogic() {
         // [-,x,x]]
         console .log('6xx-')   // проблема в vertical вероятно
         if(topArr[2][0] == 0){
-            boxesForAI[3].innerText = o
+            boxesForAI[6].innerText = o
             getAtributeDataId((7), o)
         } else if(topArr[2][1] == 0){
-            boxesForAI[4].innerText = o
+            boxesForAI[7].innerText = o
             getAtributeDataId((8), o)
         } else if(topArr[2][2] == 0){
-            boxesForAI[5].innerText = o
+            boxesForAI[8].innerText = o
             getAtributeDataId((9), o)
         }  
         // helperHorizont(6,7,8,2)    
@@ -400,13 +400,13 @@ function winCondition() {
         // [-,x,x]]
         console .log('6xx-win')
         if(topArr[2][0] == 0){
-            boxesForAI[3].innerText = o
+            boxesForAI[6].innerText = o
             getAtributeDataId((7), o)
         } else if(topArr[2][1] == 0){
-            boxesForAI[4].innerText = o
+            boxesForAI[7].innerText = o
             getAtributeDataId((8), o)
         } else if(topArr[2][2] == 0){
-            boxesForAI[5].innerText = o
+            boxesForAI[8].innerText = o
             getAtributeDataId((9), o)
         }  
         // helperHorizont(6,7,8,2) 
