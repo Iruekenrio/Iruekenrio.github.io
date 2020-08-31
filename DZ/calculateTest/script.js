@@ -18,7 +18,7 @@ calcButton.addEventListener('click', function () {
             bigPackResult += 1
         }
         let reserv = sum
-        // console.log(sum)
+        console.log(sum)
         if(area%bigPack == 0 && area <! sum){
             console.log('nice',area%bigPack)
             // return
@@ -43,7 +43,10 @@ calcButton.addEventListener('click', function () {
                         if(area == 45) {
                             bigPackResult = 2
                             littlePackResult = 5
-                        } else if(area == 35){
+                        }else if(area == 21){
+                            bigPackResult = 2
+                            littlePackResult = 1
+                        }else if(area == 35){
                             littlePackResult = 6
                         }else if(area == 15){
                             bigPackResult = 2
