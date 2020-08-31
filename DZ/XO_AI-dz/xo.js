@@ -5,6 +5,7 @@ let buttonTurn = document.querySelector('.nextTurn')
 let playGround = document.querySelector('.gameBox')
 let topArr = [[0,0,0],[0,0,0],[0,0,0]]
 
+
 let total = {
     x: 0,
     o: 0,
@@ -101,8 +102,7 @@ function clickEr(clickTarget) {
                         }
                     })
                 }
-                clickTurn()
-                
+                clickTurn()    
             }    
         }
     })

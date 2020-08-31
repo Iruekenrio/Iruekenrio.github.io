@@ -59,56 +59,56 @@ input.addEventListener('keypress', function (e){
 
 // console.log(tr)
 // console.log(td)
-function tab (stroke, stb){
-    let table = document.createElement("table");
-    document.body.append(table)
-    for(let i = 0; i < stroke; i++){
-        let tr = document.createElement("tr");
-        tr.classList.add('box')
-        for(let i = 0; i < stb; i++){
-            let td = document.createElement("td");
-            tr.append(td)
-            td.classList.add('box')
-        }
-        table.append(tr)
-    }
-}
-tab(5,5)
-let table = document.querySelector('table');
-let tr = document.querySelector('tr');
-let td = document.querySelectorAll('td');
-let box = document.querySelectorAll('box')
-// box.style.width = '100px';
-// console.log(document.querySelectorAll('td')[2])
-// console.log(document.querySelectorAll('td'))
-// document.querySelectorAll('td')[2].classList.add('red')
-function randomBackground () {
-    let arr = Array.from(document.querySelectorAll('td'))
-    let redBack = []
-    let letter = 'qwertyyuuiookgsakdakdsajcmzkd'
-    for(let i = 0; i < arr.length; i++){
-        if(Math.round(Math.random()) == 0){
-            document.querySelectorAll('td')[i].classList.add('red')
-            redBack.push(i)
-        }else 
-            // td.innerHTML = letter.substr(Math.round(Math.random()), i)
-            for(let j = 0; j < 5; j++){
-                document.querySelectorAll('td')[i].innerHTML += `${letter[Math.round(Math.random() * (letter.length - 1))]}`;
-                // console.log(j)
-                // console.log(letter[Math.round(Math.random() * letter.length)])
-                // console.log(Math.round(Math.random() * letter.length))
-                console.log(letter[0])
-            }
+// function tab (stroke, stb){
+//     let table = document.createElement("table");
+//     document.body.append(table)
+//     for(let i = 0; i < stroke; i++){
+//         let tr = document.createElement("tr");
+//         tr.classList.add('box')
+//         for(let i = 0; i < stb; i++){
+//             let td = document.createElement("td");
+//             tr.append(td)
+//             td.classList.add('box')
+//         }
+//         table.append(tr)
+//     }
+// }
+// tab(5,5)
+// let table = document.querySelector('table');
+// let tr = document.querySelector('tr');
+// let td = document.querySelectorAll('td');
+// let box = document.querySelectorAll('box')
+// // box.style.width = '100px';
+// // console.log(document.querySelectorAll('td')[2])
+// // console.log(document.querySelectorAll('td'))
+// // document.querySelectorAll('td')[2].classList.add('red')
+// function randomBackground () {
+//     let arr = Array.from(document.querySelectorAll('td'))
+//     let redBack = []
+//     let letter = 'qwertyyuuiookgsakdakdsajcmzkd'
+//     for(let i = 0; i < arr.length; i++){
+//         if(Math.round(Math.random()) == 0){
+//             document.querySelectorAll('td')[i].classList.add('red')
+//             redBack.push(i)
+//         }else 
+//             // td.innerHTML = letter.substr(Math.round(Math.random()), i)
+//             for(let j = 0; j < 5; j++){
+//                 document.querySelectorAll('td')[i].innerHTML += `${letter[Math.round(Math.random() * (letter.length - 1))]}`;
+//                 // console.log(j)
+//                 // console.log(letter[Math.round(Math.random() * letter.length)])
+//                 // console.log(Math.round(Math.random() * letter.length))
+//                 console.log(letter[0])
+//             }
             
            
         
-    }
-    let summ = document.createElement('div');
-    document.body.append(summ)
-    summ.innerHTML = `процент закрашеных: ${(redBack.length * 100) / arr.length}%`
-}
+//     }
+//     let summ = document.createElement('div');
+//     document.body.append(summ)
+//     summ.innerHTML = `процент закрашеных: ${(redBack.length * 100) / arr.length}%`
+// }
 
-randomBackground()
+// randomBackground()
 
 
 
