@@ -32,7 +32,7 @@
         flex-wrap: wrap;
         position: relative;
         
-        width: 60vw;
+        width: 75vw;
         border: 1px rgba(128, 128, 128, 0.664) solid;
         border-radius: 7px;
         
@@ -59,13 +59,15 @@
                 padding: 13px;
                 
                 .fa-edit {
-                    font-size: 25px;
+                    // font-size: 25px;
+                    @include adaptiv-font (25, 10);
                     color: #ffffff;
                     margin-left: 3px;
                     margin-bottom: 3px;
                 }
             }
             .bigText {
+                @include adaptiv-font (25, 10);
                 margin-left: 25px;
                 font-family: Lato, sans-serif;
                 color: #ffffff;
@@ -76,6 +78,7 @@
             display: flex;
             flex-wrap: wrap;
             width: 49%;
+            // min-width: 315px;
         }
         .window__login {
             flex-direction: column;
@@ -95,13 +98,12 @@
                 
                 .slash__item-lines {
                     .slash__item {
-                        
+                        // @include adaptiv-font (21, 11);
                         position: absolute;
                         z-index: 3;
                         width: 35px;
                         height: 35px;
                         border: 1px solid rgb(151, 150, 150);
-                        
                         font-size: 21px;
                         font-weight: 600;
                         padding: 5px;
@@ -135,13 +137,14 @@
                 }
             }
             .login__input-text {
+                @include adaptiv-font (14, 9);
                 width: 100%;
                 margin: 15px 0;
                 border: 1px solid rgb(182, 181, 181);
                 border-radius: 7px;
                 padding: 15px;
                 padding-left: 20px;
-                font-size: 18px;
+                // font-size: 18px;
                 font-family: Lato, sans-serif;
                 &::placeholder {
                     opacity: 0.6;
@@ -155,12 +158,13 @@
                 margin-bottom: 15px;
                 
                 &:hover .hoverInfo {
+                    @include adaptiv-font (13, 9);
                     display: block;
                     position: absolute;
                     top: 40px;
                     left: -110px;
                     width: 230px;
-                    font-size: 13px;
+                    // font-size: 13px;
                     font-family: Lato, sans-serif;
                     color: rgb(151, 150, 150);
                     background-color: #ffffff;
@@ -177,8 +181,9 @@
                     text-align: center;
                 }
                 .login__input-checkboxLabel {
+                    @include adaptiv-font (13, 9);
                     position: relative;
-                    font-size: 13px;
+                    // font-size: 13px;
                     font-weight: 500;
                     font-family: Lato, sans-serif;
                     color: rgba(136, 136, 136, 0.897);
@@ -246,7 +251,8 @@
                     display: block;
                 }
                 .text {
-                    font-size: 13px;
+                    @include adaptiv-font (13, 9);
+                    // font-size: 13px;
                     font-family: Lato, sans-serif;
                     color: rgb(151, 150, 150);
                 }
@@ -281,18 +287,75 @@
 
 @media (max-width: 768px) {
     .header {
+        .empty {
+            display: none;
+        }
         .login-register {
             top: 17%;
-            font-size: 13px;
+            // font-size: 13px;
         }
         .login-register__window {
-            width: 80vw;
+            width: 75vw;
+            padding-top: 60px;
+            .window__logo {
+                padding: 10px;
+
+                .forIcon {
+                    width: 50px;
+                    .fa-edit {
+                        font-size: 20px;
+                    }
+                }
+            }
+            .window__register, .window__login {
+                width: 100%;
+            }
+            .window__login {
+                padding: 23px 50px;
+                padding-bottom: 3px;
+                .login__input-text {
+                    padding: 7px;
+                }
+            }
+            .window__register {
+                padding: 23px 50px;
+                padding-top: 3px;
+                .form {
+                    .register__input {
+                        padding: 5px;
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 620px) {
+    .header {
+        .login-register {
+            top: 17%;
+            // font-size: 13px;
+        }
+        .login-register__window {
+            width: 75vw;
+            .window__logo {
+                // .bigText {
+                //     // font-size: 15px;
+                //     letter-spacing: normal;
+                // }
+                .forIcon {
+                    width: 50px;
+                    .fa-edit {
+                        font-size: 20px;
+                    }
+                }
+            }
         }
     }
 }
 
 
-@media (max-height: 420px) and (orientation: landscape) {
+@media (max-height: 620px) and (orientation: landscape) {
     .header {
         .empty {
             display: none;
@@ -317,13 +380,13 @@
         }
     }
 }
-@media (max-width: 480px), (max-height: 420px), (max-width: 600px) and (max-height: 450px) {
+@media (max-width: 480px), (max-height: 620px), (max-width: 600px) and (max-height: 450px) {
     .header {
         .empty {
             display: none;
         }
         .login-register__window {
-            padding-top: 70px;
+            padding-top: 45px;
             .window__login, .window__register {
                 width: 100%;
             }
@@ -331,7 +394,16 @@
                 padding: 10px;
                 .bigText {
                     letter-spacing: normal;
-                    font-size: 14px;
+                    // font-size: 10px;
+                }
+                .forIcon {
+                    width: 27px;
+                    .fa-edit {
+                        position: absolute;
+                        top: 16px;
+                        left: 16px;
+                        font-size: 12px;
+                    }
                 }
             }
             .window__login {
@@ -349,20 +421,22 @@
                 }
                 .login__input-text {
                     
-                    font-size: 12px;
+                    // font-size: 12px;
                     margin: 7px 0;
                     padding: 5px;
                 }
                 .login__button {
+                    height: 28px;
+                    margin-top: 10px;
                     padding: 5px 30px;
                 }
                 .checkbox-label {
                     &:hover .hoverInfo {
                         left: 0;
                     }
-                    .login__input-checkboxLabel {
-                        font-size: 11px;
-                    }
+                    // .login__input-checkboxLabel {
+                    //     // font-size: 11px;
+                    // }
                 }
             }
             .window__register {
@@ -376,7 +450,7 @@
                     }
                     .register__input {
                         padding: 5px;
-                        font-size: 11px;
+                        // font-size: 11px;
                     }
                     .notValid {
                         top: 4px;
@@ -385,8 +459,9 @@
                         top: 4px;
                     }
                     .register__submit {
-                        padding: 5px 30px;
-                        margin-top: 7px;
+                        height: 28px;
+                        margin-top: 10px;
+                        padding: 5px 25px;
                     }
                 }
             }
