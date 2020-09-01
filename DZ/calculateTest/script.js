@@ -10,7 +10,6 @@ calcButton.addEventListener('click', function () {
     let area = width.value * length.value
     let bigPackResult = 0;
     let littlePackResult = 0;
-    
     function tre() {
         let sum = 0
         for(let i = 0; i <= area; i+=8) {
@@ -21,7 +20,6 @@ calcButton.addEventListener('click', function () {
         console.log(sum)
         if(area%bigPack == 0 && area <! sum){
             console.log('nice',area%bigPack)
-            // return
         }else if((area - sum)%littlePack !== 0 || area - sum == -6){ 
             function rrt() {
                 console.log('funcStart')
@@ -34,25 +32,32 @@ calcButton.addEventListener('click', function () {
                     console.log('smth')
                     if(area < 6 ){
                         littlePackResult = 1
+                    }else if(area == 7 ){
+                        bigPackResult = 1
                     }else if(area > 8 && area < 12){
                         littlePackResult = 2
-                    }else if(area > 12 && area < 16){
-                        bigPackResult = 2
                     }else if(area%2 == 1){
                         console.log(area%2,'area%2')
-                        if(area == 45) {
-                            bigPackResult = 2
-                            littlePackResult = 5
-                        }else if(area == 21){
-                            bigPackResult = 2
+                        if(reserv - area == 1){
+                            console.log('perv')
+                            bigPackResult = reserv / bigPack
+                        } else if((reserv - 8 + 6) - area == 1){
+                            console.log('vtor')
+                            bigPackResult = reserv / bigPack - 1
                             littlePackResult = 1
-                        }else if(area == 35){
-                            littlePackResult = 6
-                        }else if(area == 15){
-                            bigPackResult = 2
+                        } else if((reserv - 16 + 12) - area == 1){
+                            console.log('3')
+                            bigPackResult = reserv / bigPack - 2
+                            littlePackResult = 2
+                        } else if((reserv - 24 + 18) - area == 1){
+                            console.log('4')
+                            console.log(reserv / bigPack - 3)
+                            bigPackResult = reserv / bigPack - 3
+                            littlePackResult = 3
                         }else{
-                        bigPackResult = reserv / bigPack - 3
-                        littlePackResult = 3
+                            console.log('elseee')
+                            bigPackResult = reserv / bigPack - 3
+                            littlePackResult = 3
                         }
                     } else if(reserv - area == 1){
                         console.log('smthGGG')
@@ -65,14 +70,22 @@ calcButton.addEventListener('click', function () {
         console.log(sum, 'sum')    
     }
     tre()
-    
     popUp.classList.remove('hide')
     popUp.innerHTML = `
     You will need 
-    <span>${littlePackResult}</span>
-     packs of 6pcs, 
-     <span>${bigPackResult}</span>
-      packs of 8pcs.`
+    <div>
+        <span>${area}pcs</span>
+        at all, it is
+    </div>
+    <div>
+        <span>${littlePackResult}</span>
+        packs of 6pcs,
+    </div> 
+    <div>
+    <span>${bigPackResult}</span>
+      packs of 8pcs.
+    </div>
+    <span>${(littlePackResult * 6) + (bigPackResult * 8) - area}pcs unused</span>`
 
     
     console.log(area, 'area')
@@ -85,66 +98,26 @@ calcButton.addEventListener('click', function () {
 })
 
 
-// console.log(18%6)
-// console.log(18%8)
 
 
 
-
-// function getCombo() {
-//     let sum = area;
-//     console.log(sum)
-//     // itemArea
-//     if(area%bigPack == 0) {
-//         console.log('bigPack win',area%bigPack)
-//         bigPackResult = area / bigPack
-//         return 
-//     } else {
-//         function rr() {
-//             if(sum <= 0){
-//                 console.log(sum)
-//                 sum -= bigPack
-//                 console.log(area%bigPack,'gbbg')
-//                 console.log(area%littlePack, 'tltl')
-//             } else rr()
-//         }
-//         rr()
-//     }
-    
-// }
-// getCombo()
-// if(area < 6){
-    //     littlePackResult = 1
-    // }else if(area%bigPack == 0) {
-    //     console.log('bigPack win',area%bigPack)
-    //     bigPackResult = area / bigPack
-    // } else if(area == 9){
-    //     littlePackResult = 2
-    //     // return
-    // } else if (area%bigPack > area%littlePack) {
-    //     console.log('smallPack win', area%littlePack)
-    //     if(area%bigPack == 7) {
-    //         console.log('chudo')
-    //         bigPackResult = Math.ceil(area / area%bigPack)
-    //     } else if(area%littlePack == 0){
-    //         littlePackResult = area / littlePack
-    //     } else {
-    //         bigPackResult = Math.floor(area / bigPack)
-    //         littlePackResult += 1
-    //     }
-    //     // littlePackResult = area / littlePack
-    // } else if(area%bigPack == area%littlePack) {
-    //     if(area%bigPack == 0 && 0 == area%littlePack) {
-    //         bigPackResult = area / bigPack
-            
-    //     } else cheking(area)
-        
-    //     function cheking(areaItem) {
-    //         let sum = 0
-    //         if(sum <= areaItem){
-               
-    //         }
-    //         console.log('YES')
-    //     }
-    //     console.log('ничья')
-    // }
+                        // if(area == 45) {
+                        //     bigPackResult = 2
+                        //     littlePackResult = 5
+                        // }else if(area == 13){
+                        //     bigPackResult = 1
+                        //     littlePackResult = 1
+                        // }else if(area == 77){
+                        //     bigPackResult = 9
+                        //     littlePackResult = 1
+                        // }else if(area == 75){
+                        //     bigPackResult = 8
+                        //     littlePackResult = 2
+                        // }else if(area == 21){
+                        //     bigPackResult = 2
+                        //     littlePackResult = 1
+                        // }else if(area == 35){
+                        //     littlePackResult = 6
+                        // }else if(area == 15){
+                        //     bigPackResult = 2
+                        // }
