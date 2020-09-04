@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+.header {
+    width: 100%;
+    height: 40px;
+    background-color: #191919;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+        margin: 0 20%;
+        .social {
+            display: flex;
+            align-items: center;
+            letter-spacing: 14px;
+            font-size: 16px;
+            opacity: 0.38;
+            color: #ffffff;
+            cursor: pointer;
+            .ico {
+                @include adaptiv-font(16, 12);
+            }
+        }
+        .signIn {
+            @include adaptiv-font(14, 12);
+            display: flex;
+            align-items: center;
+            opacity: 0.5;
+            color: #ffffff;
+            font-family: Montserrat, sans-serif;
+            line-height: 27px;
+            letter-spacing: 0.8px;
+            cursor: pointer;
+            .signIn__line {
+                width: 1px;
+                height: 17px;
+                background-color: #ffffff;
+            }
+            .signIn__item {
+                white-space: nowrap;
+                margin: 0 10px;
+                .icoMove {
+                    // position: relative;
+                    // // top: 5px;
+                    margin-right: 5px;
+                }
+            }
+            .sign {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 568px) {
+    .header {
+        .wrapper {
+            .social {
+                display: none;
+            }
+            .signIn {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                width: 100%;
+                .signIn__line {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1366px) {
+    .header {
+        .wrapper {
+            margin: 0 10%;
+        }
+    }
+}
+@media (max-width: 480px) {
+    .header {
+        background-color: #303f9f;
+    }
+}

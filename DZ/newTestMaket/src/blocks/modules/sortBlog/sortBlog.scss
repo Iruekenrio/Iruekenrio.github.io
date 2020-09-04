@@ -1,0 +1,97 @@
+.sortBlog {
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 1px 0 #dddddd;
+    background-color: #ffffff;
+    .wrapper {
+        display: flex;
+        align-items: center;
+        height: 60px;
+        margin: 0 20%;
+        .sortBlog__hiden-select, .sort {
+            display: none;
+        }
+        .sortBlog__name {
+            @include adaptiv-font(16, 9);
+            font-family: Montserrat, sans-serif;
+            opacity: 0.87;
+            font-weight: 700;
+            margin-right: 5px;
+        }
+        .sortBlog__item {
+            @include adaptiv-font(16, 9);
+            font-family: Montserrat, sans-serif;
+            border-radius: 30px;
+            background-color: #f5f5f5;
+            margin: 0 15px;
+            padding: 7px 20px;
+            opacity: 0.87;
+            &:hover {
+                color: #3f51b5;
+                border: 1px solid #3f51b5;
+                background-color: #ffffff;
+            }
+        }
+    }
+}
+
+@media (max-width: 1366px) {
+    .sortBlog {
+        .wrapper {
+            margin: 0 10%;
+            .sortBlog__item {
+                margin: 0 2px;
+                padding: 3px 10px;
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+    .sortBlog {
+        .wrapper {
+            .sortBlog__item {
+                margin: 0 2px;
+                padding: 3px 10px;
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+    .sortBlog {
+        .wrapper {
+            .sortBlog__name {
+                display: none;
+            }
+            .sortBlog__item {
+                display: none;
+                margin: 0 2px;
+                padding: 3px 10px;
+            }
+            .sort {
+                display: block;
+                position: absolute;
+                right: 10%;
+                border-radius: 0 4px 4px 0;
+                border: 1px solid #e0e0e0;
+                background-color: #eeeeee;
+                padding: 8px 13px;
+                color: #5c5c5c;
+            }
+            .sortBlog__hiden-select {
+                display: block;
+                width: 100%;
+                font-family: Montserrat, sans-serif;
+                font-size: 16px;
+                border: 1px solid #e0e0e0;
+                border-radius: 4px;
+                padding: 7px 15px;
+                .sortBlog__hised-option, option {
+                    // position: absolute;
+                    width: 100px;
+                    font-size: 10px;
+                    background-color: rgb(30, 139, 248);
+                }
+            }
+        }
+    }
+}
