@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    .datas {
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 400px;
+            input {
+                margin: 10px 20px;
+            }
+            .btn {
+                margin-top: 20px;
+            }
+        }
+    }
+}

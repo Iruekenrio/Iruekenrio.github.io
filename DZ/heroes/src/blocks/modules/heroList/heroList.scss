@@ -1,0 +1,35 @@
+.heroList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 40px;
+    img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    .showHero {
+        display: flex;
+        // justify-content: space-between;
+        width: 100%;
+        .hero {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            margin-top: 50px;
+            cursor: pointer;
+            // background-color: rgb(196, 42, 42);
+            .heroName {
+                position: absolute;
+                top: -40px;
+                color: rgba(139, 238, 162, 0.788);
+                font-size: 35px;
+                font-weight: 700;
+                margin: 0;
+            }
+        }
+    }
+}
